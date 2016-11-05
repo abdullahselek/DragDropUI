@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20637AD344BA5A2CAEAE142A /* Pods_DragDropUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90573FAC2336A48A45163B41 /* Pods_DragDropUITests.framework */; };
 		A454202A1DCE962300ECFC9E /* DragDropUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A45420201DCE962300ECFC9E /* DragDropUI.framework */; };
 		A454202F1DCE962300ECFC9E /* DragDropUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A454202E1DCE962300ECFC9E /* DragDropUITests.swift */; };
 		A45420311DCE962300ECFC9E /* DragDropUI.h in Headers */ = {isa = PBXBuildFile; fileRef = A45420231DCE962300ECFC9E /* DragDropUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8E881663B757F3B3638641C /* Pods_DragDropUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88620FDA57BA5A7FBC9417C1 /* Pods_DragDropUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,6 +25,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C191DCA4222333283B6D66F /* Pods-DragDropUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragDropUI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DragDropUI/Pods-DragDropUI.debug.xcconfig"; sourceTree = "<group>"; };
+		72FCCB802003167FE647540E /* Pods-DragDropUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragDropUI.release.xcconfig"; path = "Pods/Target Support Files/Pods-DragDropUI/Pods-DragDropUI.release.xcconfig"; sourceTree = "<group>"; };
+		88620FDA57BA5A7FBC9417C1 /* Pods_DragDropUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DragDropUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8912AADA610CD1765F50AFCD /* Pods-DragDropUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragDropUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DragDropUITests/Pods-DragDropUITests.release.xcconfig"; sourceTree = "<group>"; };
+		90573FAC2336A48A45163B41 /* Pods_DragDropUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DragDropUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A41D4AEC82166194AA7D26AA /* Pods-DragDropUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragDropUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DragDropUITests/Pods-DragDropUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A45420201DCE962300ECFC9E /* DragDropUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DragDropUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A45420231DCE962300ECFC9E /* DragDropUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DragDropUI.h; sourceTree = "<group>"; };
 		A45420241DCE962300ECFC9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8E881663B757F3B3638641C /* Pods_DragDropUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,18 +53,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				A454202A1DCE962300ECFC9E /* DragDropUI.framework in Frameworks */,
+				20637AD344BA5A2CAEAE142A /* Pods_DragDropUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		878C7E314738B348ACEFCBC8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				88620FDA57BA5A7FBC9417C1 /* Pods_DragDropUI.framework */,
+				90573FAC2336A48A45163B41 /* Pods_DragDropUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A45420161DCE962300ECFC9E = {
 			isa = PBXGroup;
 			children = (
 				A45420221DCE962300ECFC9E /* DragDropUI */,
 				A454202D1DCE962300ECFC9E /* DragDropUITests */,
 				A45420211DCE962300ECFC9E /* Products */,
+				BAF255E275766B28C32E424E /* Pods */,
+				878C7E314738B348ACEFCBC8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +107,17 @@
 			path = DragDropUITests;
 			sourceTree = "<group>";
 		};
+		BAF255E275766B28C32E424E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2C191DCA4222333283B6D66F /* Pods-DragDropUI.debug.xcconfig */,
+				72FCCB802003167FE647540E /* Pods-DragDropUI.release.xcconfig */,
+				A41D4AEC82166194AA7D26AA /* Pods-DragDropUITests.debug.xcconfig */,
+				8912AADA610CD1765F50AFCD /* Pods-DragDropUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -104,10 +136,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A45420341DCE962300ECFC9E /* Build configuration list for PBXNativeTarget "DragDropUI" */;
 			buildPhases = (
+				095A7C5C5537B3C823FA8C1C /* [CP] Check Pods Manifest.lock */,
 				A454201B1DCE962300ECFC9E /* Sources */,
 				A454201C1DCE962300ECFC9E /* Frameworks */,
 				A454201D1DCE962300ECFC9E /* Headers */,
 				A454201E1DCE962300ECFC9E /* Resources */,
+				CF1A508D4A6EB9912D748BB3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -122,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A45420371DCE962300ECFC9E /* Build configuration list for PBXNativeTarget "DragDropUITests" */;
 			buildPhases = (
+				33B7CC5D2A9665C9449AED8F /* [CP] Check Pods Manifest.lock */,
 				A45420251DCE962300ECFC9E /* Sources */,
 				A45420261DCE962300ECFC9E /* Frameworks */,
 				A45420271DCE962300ECFC9E /* Resources */,
+				FEF26D70C144177948DDEA8F /* [CP] Embed Pods Frameworks */,
+				3A5CC5776088F15C3630479C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -190,6 +227,84 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		095A7C5C5537B3C823FA8C1C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		33B7CC5D2A9665C9449AED8F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3A5CC5776088F15C3630479C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DragDropUITests/Pods-DragDropUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF1A508D4A6EB9912D748BB3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DragDropUI/Pods-DragDropUI-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FEF26D70C144177948DDEA8F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DragDropUITests/Pods-DragDropUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A454201B1DCE962300ECFC9E /* Sources */ = {
@@ -319,6 +434,7 @@
 		};
 		A45420351DCE962300ECFC9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C191DCA4222333283B6D66F /* Pods-DragDropUI.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -338,6 +454,7 @@
 		};
 		A45420361DCE962300ECFC9E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72FCCB802003167FE647540E /* Pods-DragDropUI.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -357,6 +474,7 @@
 		};
 		A45420381DCE962300ECFC9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A41D4AEC82166194AA7D26AA /* Pods-DragDropUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = DragDropUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -368,6 +486,7 @@
 		};
 		A45420391DCE962300ECFC9E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8912AADA610CD1765F50AFCD /* Pods-DragDropUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = DragDropUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -396,6 +515,7 @@
 				A45420361DCE962300ECFC9E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A45420371DCE962300ECFC9E /* Build configuration list for PBXNativeTarget "DragDropUITests" */ = {
 			isa = XCConfigurationList;
@@ -404,6 +524,7 @@
 				A45420391DCE962300ECFC9E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
