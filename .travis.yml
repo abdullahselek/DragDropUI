@@ -1,5 +1,5 @@
 language: objective-c
-osx_image: xcode8
+osx_image: xcode7.3
 xcode_project: DragDropUI.xcworkspace
 xcode_scheme: DragDropUITests
 xcode_sdk: iphonesimulator9.3
