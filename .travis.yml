@@ -9,7 +9,7 @@ branches:
  - master
 
 before_install:
-- rm -rf /Users/travis/Library/Developer/Xcode/DerivedData/ASCollectionView-*/
+- rm -rf /Users/travis/Library/Developer/Xcode/DerivedData/DragDropUI-*/
 - rvm use $RVM_RUBY_VERSION
 
 install: bundle
