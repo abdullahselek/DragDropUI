@@ -1,0 +1,20 @@
+language: objective-c
+osx_image: xcode8
+xcode_project: DragDropUI.xcworkspace
+xcode_scheme: DragDropUITests
+xcode_sdk: iphonesimulator9.3
+
+branches:
+ only:
+ - master
+
+before_install:
+- rm -rf /Users/travis/Library/Developer/Xcode/DerivedData/ASCollectionView-*/
+- rvm use $RVM_RUBY_VERSION
+
+install: bundle
+
+script:
+- xcodebuild -workspace DragDropUI.xcworkspace -scheme DragDropUI -destination "platform=iOS Simulator,name=iPhone 6,OS=9.3" clean test | xcpretty
+
+after_success: slather
