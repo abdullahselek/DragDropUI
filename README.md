@@ -1,2 +1,2 @@
 # DragDropUI
-A set of iPhone UI components which have drop &amp; drop capability.
+A set of iOS UI components which have drop &amp; drop capability.
