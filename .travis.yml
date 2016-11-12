@@ -12,7 +12,9 @@ before_install:
 - rm -rf /Users/travis/Library/Developer/Xcode/DerivedData/DragDropUI-*/
 - rvm use $RVM_RUBY_VERSION
 
-install: bundle
+install:
+- bundle
+- bundle install --without=documentation --path ../travis_bundle_dir
 
 script:
 - xcodebuild -workspace DragDropUI.xcworkspace -scheme DragDropUI -destination "platform=iOS Simulator,name=iPhone 6,OS=9.3" clean test | xcpretty
