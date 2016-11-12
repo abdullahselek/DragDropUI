@@ -1,8 +1,8 @@
 language: objective-c
-osx_image: xcode7.3
+osx_image: xcode8
 xcode_project: DragDropUI.xcworkspace
 xcode_scheme: DragDropUITests
-xcode_sdk: iphonesimulator9.3
+xcode_sdk: iphonesimulator10.0
 
 branches:
  only:
@@ -17,6 +17,6 @@ install:
 - bundle install --without=documentation --path ../travis_bundle_dir
 
 script:
-- xcodebuild -workspace DragDropUI.xcworkspace -scheme DragDropUI -destination "platform=iOS Simulator,name=iPhone 6,OS=9.3" clean test | xcpretty
+- xcodebuild -workspace DragDropUI.xcworkspace -scheme DragDropUI -destination "platform=iOS Simulator,name=iPhone 6s,OS=10.0" clean test | xcpretty
 
 after_success: slather
