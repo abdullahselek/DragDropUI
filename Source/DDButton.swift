@@ -9,9 +9,11 @@
 import UIKit
 
 public protocol DDButtonDelegate {
-    func buttonWasDragged(button: UIButton, centerOfButton: CGPoint)
+
+    func buttonWasDragged(button: UIButton, droppedPoint: CGPoint)
     
-    func buttonWasDropped(button: UIButton)
+    func buttonWasDropped(button: UIButton, droppedPoint: CGPoint)
+
 }
 
 public class DDButton: UIButton {
@@ -20,48 +22,43 @@ public class DDButton: UIButton {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        addGestureActions(button: self)
+        addGestureAction(button: self)
     }
 
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        addGestureActions(button: self)
+        addGestureAction(button: self)
     }
     
-    private func addGestureActions(button: UIButton) {
-        addTarget(self, action: #selector(wasDragged(button:event:)), for: .touchDragInside)
-        addTarget(self, action: #selector(wasDropped(button:event:)), for: .touchUpInside)
+    internal func addGestureAction(button: UIButton) {
+        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(DDButton.handlePan(_:)))
+        addGestureRecognizer(panGestureRecognizer)
     }
     
-    @objc func wasDragged(button: UIButton, event: UIEvent) {
-        let touches: Set<UITouch> = event.touches(for: button)!
-        let touch = touches.first! as UITouch
-        let previousLocation: CGPoint = touch.previousLocation(in: button)
-        let location: CGPoint = touch.location(in: button)
-        let deltaX: CGFloat = location.x - previousLocation.x
-        let deltaY: CGFloat = location.y - previousLocation.y
-        let center = CGPoint(x: button.center.x + deltaX, y: button.center.y + deltaY)
-        button.center = center
-        handleDragged(button: button)
-    }
-    
-    @objc func wasDropped(button: UIButton, event: UIEvent) {
-        let touches: Set<UITouch> = event.touches(for: button)!
-        let touch = touches.first! as UITouch
-        if touch.phase == .ended {
-            handleDropped(button: button)
+    @objc internal func handlePan(_ gestureRecognizer: UIPanGestureRecognizer) {
+        let translation = gestureRecognizer.translation(in: superview!)
+        let button = gestureRecognizer.view as! UIButton
+        button.center = CGPoint(x: button.center.x + translation.x, y: button.center.y + translation.y)
+        if (gestureRecognizer.state == .changed) {
+            handleTouchChanged(button: button, gestureRecognizer: gestureRecognizer)
+        }
+        gestureRecognizer.setTranslation(CGPoint(), in: superview!)
+        if (gestureRecognizer.state == .ended) {
+            handleTouchEnded(button: button, gestureRecognizer: gestureRecognizer)
         }
     }
     
-    private func handleDragged(button: UIButton) {
+    internal func handleTouchChanged(button: UIButton, gestureRecognizer: UIPanGestureRecognizer) {
+        let point = gestureRecognizer.location(in: superview!)
         if delegate != nil {
-            delegate!.buttonWasDragged(button: button, centerOfButton: button.center)
+            delegate!.buttonWasDragged(button: button, droppedPoint: point)
         }
     }
     
-    private func handleDropped(button: UIButton) {
+    internal func handleTouchEnded(button: UIButton, gestureRecognizer: UIPanGestureRecognizer) {
+        let point = gestureRecognizer.location(in: superview!)
         if delegate != nil {
-            delegate!.buttonWasDropped(button: button)
+            delegate!.buttonWasDropped(button: button, droppedPoint: point)
         }
     }
 

@@ -19,8 +19,7 @@ class DDButtonTests: QuickSpec {
                 it("withFrame should initiate successfully") {
                     let button = DDButton(frame: CGRect(x: 0.0, y: 0.0, width: 200.0, height: 40.0))
                     expect(button).notTo(beNil())
-                    expect(button.actions(forTarget: button, forControlEvent: .touchDragInside)).notTo(beNil())
-                    expect(button.actions(forTarget: button, forControlEvent: .touchUpInside)).notTo(beNil())
+                    expect(button.gestureRecognizers).to(haveCount(1))
                 }
             })
             context("button wasDragged", {
@@ -30,8 +29,10 @@ class DDButtonTests: QuickSpec {
                     expect(button).notTo(beNil())
                     button.delegate = viewController
                     expect(button.delegate).notTo(beNil())
+                    let gestureRecognizer = MockPanGestureRecognizer(target: button, action: #selector(DDButton.handlePan(_:)))
+                    button.addGestureRecognizer(gestureRecognizer)
                     viewController.view.addSubview(button)
-                    button.sendActions(for: .touchDragInside)
+                    button.handlePan(gestureRecognizer)
                     expect(viewController.wasDragged).to(beTrue())
                 }
             })
@@ -53,19 +54,23 @@ class DDButtonTests: QuickSpec {
                     expect(button).notTo(beNil())
                     button.delegate = viewController
                     expect(button.delegate).notTo(beNil())
+                    let gestureRecognizer = UIPanGestureRecognizer(target: button, action: #selector(DDButton.handlePan(_:)))
+                    button.addGestureRecognizer(gestureRecognizer)
                     viewController.view.addSubview(button)
-                    button.sendActions(for: .touchUpInside)
+                    button.handlePan(gestureRecognizer)
                     expect(viewController.wasDropped).to(beTrue())
                 }
             })
             context("button wasDropped", {
-                it("and delegate nil should not inform the view controller") {
+                it("and delegate not nil should not inform the view controller") {
                     let viewController = ButtonTestViewControler()
                     let button = MockDDButton(frame: CGRect(x: 0.0, y: 0.0, width: 200.0, height: 40.0))
                     expect(button).notTo(beNil())
                     expect(button.delegate).to(beNil())
+                    let gestureRecognizer = UIPanGestureRecognizer(target: button, action: #selector(DDButton.handlePan(_:)))
+                    button.addGestureRecognizer(gestureRecognizer)
                     viewController.view.addSubview(button)
-                    button.sendActions(for: .touchUpInside)
+                    button.handlePan(gestureRecognizer)
                     expect(viewController.wasDropped).to(beFalse())
                 }
             })
@@ -74,34 +79,26 @@ class DDButtonTests: QuickSpec {
     
 }
 
+extension UIPanGestureRecognizer {
+    
+    override open var state: UIGestureRecognizerState {
+        return .ended
+    }
+    
+}
+
 private class MockDDButton: DDButton {
     
-    @objc override func wasDragged(button: UIButton, event: UIEvent) {
-        let event = MockEvent()
-        super.wasDragged(button: button, event: event)
-    }
-    
-    @objc override func wasDropped(button: UIButton, event: UIEvent) {
-        let event = MockEvent()
-        super.wasDropped(button: button, event: event)
+    @objc override func handlePan(_ gestureRecognizer: UIPanGestureRecognizer) {
+        super.handlePan(gestureRecognizer)
     }
     
 }
 
-private class MockEvent: UIEvent {
+private class MockPanGestureRecognizer: UIPanGestureRecognizer {
     
-    override func touches(for view: UIView) -> Set<UITouch>? {
-        var touches = Set<UITouch>()
-        touches.insert(MockTouch())
-        return touches
-    }
-    
-}
-
-private class MockTouch: UITouch {
-    
-    override var phase: UITouchPhase {
-        return UITouchPhase.ended
+    override open var state: UIGestureRecognizerState {
+        return .changed
     }
     
 }
@@ -111,11 +108,12 @@ private class ButtonTestViewControler: UIViewController, DDButtonDelegate {
     public var wasDragged: Bool! = false
     public var wasDropped: Bool! = false
     
-    func buttonWasDragged(button: UIButton, centerOfButton: CGPoint) {
+    public func buttonWasDropped(button: UIButton, droppedPoint: CGPoint) {
+        wasDropped = true
+    }
+    
+    public func buttonWasDragged(button: UIButton, droppedPoint: CGPoint) {
         wasDragged = true
     }
     
-    func buttonWasDropped(button: UIButton) {
-        wasDropped = true
-    }
 }
