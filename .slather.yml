@@ -1,9 +1,9 @@
 ci_service: travis_ci
 coverage_service: coveralls
-workspace: DragDropUI.xcodeworkspace
+workspace: DragDropUI.xcworkspace
 xcodeproj: DragDropUI.xcodeproj
 scheme: DragDropUI
-source_directory: Source
+source_directory: Source/
 ignore:
   - DragDropUI/AppDelegate.swift
   - DragDropUI/ViewController.swift
