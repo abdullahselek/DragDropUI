@@ -95,7 +95,7 @@ private class MockDDButton: DDButton {
     
 }
 
-private class MockPanGestureRecognizer: UIPanGestureRecognizer {
+public class MockPanGestureRecognizer: UIPanGestureRecognizer {
     
     override open var state: UIGestureRecognizerState {
         return .changed
