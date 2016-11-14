@@ -13,7 +13,6 @@
 		A42E188A1DCF2DBD008913BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A42E18881DCF2DBD008913BD /* Main.storyboard */; };
 		A42E188C1DCF2DBD008913BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A42E188B1DCF2DBD008913BD /* Assets.xcassets */; };
 		A42E188F1DCF2DBD008913BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A42E188D1DCF2DBD008913BD /* LaunchScreen.storyboard */; };
-		A42E189A1DCF2DBD008913BD /* DragDropUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42E18991DCF2DBD008913BD /* DragDropUITests.swift */; };
 		A42E18A61DCF2EAF008913BD /* DDButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42E18A51DCF2EAF008913BD /* DDButton.swift */; };
 		A42E18A81DCF2EB8008913BD /* DDButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42E18A71DCF2EB8008913BD /* DDButtonTests.swift */; };
 		A4932B7D1DD751B800D3839E /* DDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4932B7C1DD751B800D3839E /* DDView.swift */; };
@@ -43,7 +42,6 @@
 		A42E188E1DCF2DBD008913BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A42E18901DCF2DBD008913BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A42E18951DCF2DBD008913BD /* DragDropUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DragDropUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A42E18991DCF2DBD008913BD /* DragDropUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragDropUITests.swift; sourceTree = "<group>"; };
 		A42E189B1DCF2DBD008913BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A42E18A51DCF2EAF008913BD /* DDButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DDButton.swift; path = Source/DDButton.swift; sourceTree = "<group>"; };
 		A42E18A71DCF2EB8008913BD /* DDButtonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDButtonTests.swift; sourceTree = "<group>"; };
@@ -113,7 +111,6 @@
 			children = (
 				A42E18A71DCF2EB8008913BD /* DDButtonTests.swift */,
 				A4932B7E1DD7530900D3839E /* DDViewTests.swift */,
-				A42E18991DCF2DBD008913BD /* DragDropUITests.swift */,
 				A42E189B1DCF2DBD008913BD /* Info.plist */,
 			);
 			path = DragDropUITests;
@@ -362,7 +359,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A42E189A1DCF2DBD008913BD /* DragDropUITests.swift in Sources */,
 				A42E18A81DCF2EB8008913BD /* DDButtonTests.swift in Sources */,
 				A4932B7F1DD7530900D3839E /* DDViewTests.swift in Sources */,
 			);
