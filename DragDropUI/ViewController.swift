@@ -8,11 +8,23 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, DDViewDelegate {
+
+    @IBOutlet weak var draggableView: DDView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        draggableView.delegate = self
+    }
+
+    // MARK: DDViewDelegate
+
+    func viewWasDragged(view: UIView, draggedPoint: CGPoint) {
+        print("Dragged Point : ", draggedPoint)
+    }
+
+    func viewWasDropped(view: UIView, droppedPoint: CGPoint) {
+        print("Dropped Point : ", droppedPoint)
     }
 
     override func didReceiveMemoryWarning() {

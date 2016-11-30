@@ -70,6 +70,9 @@
                             <constraint firstItem="9tf-Vm-hEW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uNQ-zb-jye"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="draggableView" destination="9tf-Vm-hEW" id="s0X-pq-E13"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
