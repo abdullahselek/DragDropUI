@@ -2,7 +2,7 @@
 //  DDView.swift
 //  DragDropUI
 //
-//  Created by Abdullah Selek on 12/11/2016.
+//  Created by Abdullah Selek on 30/11/2016.
 //  Copyright © 2016 Abdullah Selek. All rights reserved.
 //
 //  MIT License
@@ -27,59 +27,27 @@
 
 import UIKit
 
-public extension DDProtocol where Self: UIView {
+public class DDView: UIView, DDProtocol {
+    
+    public var draggedPoint: CGPoint = CGPoint.zero
+    public var delegate: DDViewDelegate?
 
-    public var view: UIView { get { return self } }
-    public var parentView: UIView? { get { return self.view.superview } }
+    var initialLocation: CGPoint = CGPoint.zero
 
-    func registerGesture() {
-        let panGesture = UIPanGestureRecognizer()
-        panGesture.handler = { gesture in
-            self.handlePan(panGesture: gesture as! UIPanGestureRecognizer)
-        }
-
-        self.view.addGestureRecognizer(panGesture)
-
-        let pressGesture = UILongPressGestureRecognizer()
-        pressGesture.minimumPressDuration = 0.001
-        pressGesture.handler = { gesture in
-            self.didPress(pressGesture: gesture as! UILongPressGestureRecognizer)
-        }
-
-        self.view.addGestureRecognizer(pressGesture)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
     }
 
-    func removeGesture() {
-        guard self.gestureRecognizers != nil else {
-            return
-        }
-
-        let _ = self.gestureRecognizers!
-            .filter({ $0.delegate is UIGestureRecognizer.DDGestureDelegate })
-            .map({ self.removeGestureRecognizer($0) })
+    public required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
     }
 
-    func didPress(pressGesture: UILongPressGestureRecognizer) {
-        switch pressGesture.state {
-        case .began:
-            self.draggedPoint = self.view.center
-            self.parentView?.bringSubview(toFront: self.view)
-            if self.delegate != nil {
-                self.delegate!.viewWasDragged(view: self, draggedPoint: self.draggedPoint)
-            }
-            break
-        case .cancelled, .ended, .failed:
-            if self.delegate != nil {
-                self.delegate!.viewWasDropped(view: self, droppedPoint: self.draggedPoint)
-            }
-            break
-        default:
-            break
+    override public func didMoveToSuperview() {
+        if self.superview != nil {
+            self.registerGesture()
+        } else {
+            self.removeGesture()
         }
     }
 
-    func handlePan(panGesture: UIPanGestureRecognizer) {
-        let translation = panGesture.translation(in: self.parentView)
-        self.view.center = CGPoint(x: self.draggedPoint.x + translation.x, y: self.draggedPoint.y + translation.y)
-    }
 }
