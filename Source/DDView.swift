@@ -27,58 +27,59 @@
 
 import UIKit
 
-public protocol DDViewDelegate {
-    
-    func viewWasDragged(view: UIView, draggedPoint: CGPoint)
-    
-    func viewWasDropped(view: UIView, droppedPoint: CGPoint)
-    
-}
+public extension DDProtocol where Self: UIView {
 
-class DDView: UIView {
-    
-    public var delegate: DDViewDelegate?
+    public var view: UIView { get { return self } }
+    public var parentView: UIView? { get { return self.view.superview } }
 
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
-        addGestureAction(view: self)
-    }
-    
-    public required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        addGestureAction(view: self)
-    }
-    
-    internal func addGestureAction(view: UIView) {
-        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(DDView.handlePan(_:)))
-        addGestureRecognizer(panGestureRecognizer)
-    }
-    
-    @objc internal func handlePan(_ gestureRecognizer: UIPanGestureRecognizer) {
-        let translation = gestureRecognizer.translation(in: superview!)
-        let view = gestureRecognizer.view!
-        view.center = CGPoint(x: view.center.x + translation.x, y: view.center.y + translation.y)
-        if (gestureRecognizer.state == .changed) {
-            handleTouchChanged(view: view, gestureRecognizer: gestureRecognizer)
+    func registerGesture() {
+        let panGesture = UIPanGestureRecognizer()
+        panGesture.handler = { gesture in
+            self.handlePan(panGesture: gesture as! UIPanGestureRecognizer)
         }
-        gestureRecognizer.setTranslation(CGPoint(), in: superview!)
-        if (gestureRecognizer.state == .ended) {
-            handleTouchEnded(view: view, gestureRecognizer: gestureRecognizer)
+
+        self.view.addGestureRecognizer(panGesture)
+
+        let pressGesture = UILongPressGestureRecognizer()
+        pressGesture.minimumPressDuration = 0.001
+        pressGesture.handler = { gesture in
+            self.didPress(pressGesture: gesture as! UILongPressGestureRecognizer)
         }
+
+        self.view.addGestureRecognizer(pressGesture)
     }
-    
-    internal func handleTouchChanged(view: UIView, gestureRecognizer: UIPanGestureRecognizer) {
-        let point = gestureRecognizer.location(in: superview!)
-        if delegate != nil {
-            delegate!.viewWasDragged(view: view, draggedPoint: point)
+
+    func removeGesture() {
+        guard self.gestureRecognizers != nil else {
+            return
         }
+
+        let _ = self.gestureRecognizers!
+            .filter({ $0.delegate is UIGestureRecognizer.DDGestureDelegate })
+            .map({ self.removeGestureRecognizer($0) })
     }
-    
-    internal func handleTouchEnded(view: UIView, gestureRecognizer: UIPanGestureRecognizer) {
-        let point = gestureRecognizer.location(in: superview!)
-        if delegate != nil {
-            delegate!.viewWasDropped(view: view, droppedPoint: point)
+
+    func didPress(pressGesture: UILongPressGestureRecognizer) {
+        switch pressGesture.state {
+        case .began:
+            self.draggedPoint = self.view.center
+            self.parentView?.bringSubview(toFront: self.view)
+            if self.delegate != nil {
+                self.delegate!.viewWasDragged(view: self, draggedPoint: self.draggedPoint)
+            }
+            break
+        case .cancelled, .ended, .failed:
+            if self.delegate != nil {
+                self.delegate!.viewWasDropped(view: self, droppedPoint: self.draggedPoint)
+            }
+            break
+        default:
+            break
         }
     }
 
+    func handlePan(panGesture: UIPanGestureRecognizer) {
+        let translation = panGesture.translation(in: self.parentView)
+        self.view.center = CGPoint(x: self.draggedPoint.x + translation.x, y: self.draggedPoint.y + translation.y)
+    }
 }

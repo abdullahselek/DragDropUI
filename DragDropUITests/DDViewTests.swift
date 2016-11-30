@@ -33,6 +33,7 @@ import Nimble
 class DDViewTests: QuickSpec {
     
     override func spec() {
+        /***
         describe("DragDropView", {
             context("view init", {
                 it("withFrame should initiate successfully") {
@@ -96,11 +97,12 @@ class DDViewTests: QuickSpec {
                 }
             })
         })
+        ***/
     }
     
 }
 
-
+/***
 private class MockDDView: DDView {
     
     @objc override func handlePan(_ gestureRecognizer: UIPanGestureRecognizer) {
@@ -123,3 +125,4 @@ private class TestViewControler: UIViewController, DDViewDelegate {
     }
     
 }
+***/

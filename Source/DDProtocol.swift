@@ -27,7 +27,17 @@
 
 import UIKit
 
-protocol DDProtocol: class {
+public protocol DDViewDelegate {
+
+    func viewWasDragged(view: UIView, draggedPoint: CGPoint)
+
+    func viewWasDropped(view: UIView, droppedPoint: CGPoint)
+
+}
+
+public protocol DDProtocol: class {
+
+    var delegate: DDViewDelegate? { get set }
 
     var view: UIView { get }
     var draggedPoint: CGPoint { get set }
