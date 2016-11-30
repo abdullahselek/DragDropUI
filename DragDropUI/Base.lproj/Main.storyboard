@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -38,10 +39,23 @@
                                 </constraints>
                                 <state key="normal" title="Drag Drop"/>
                             </button>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHa-XQ-Jwp" customClass="DDLabel" customModule="DragDropUI" customModuleProvider="target">
+                                <rect key="frame" x="226" y="224" width="70" height="30"/>
+                                <color key="backgroundColor" red="0.97254901959999995" green="0.37647058820000001" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="QTX-id-GTc"/>
+                                    <constraint firstAttribute="width" constant="70" id="axt-0z-LTu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="pHa-XQ-Jwp" secondAttribute="trailing" constant="63" id="ADZ-CW-3No"/>
                             <constraint firstItem="ihv-WF-HpI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="155" id="Anq-M3-cbH"/>
+                            <constraint firstItem="pHa-XQ-Jwp" firstAttribute="top" secondItem="9tf-Vm-hEW" secondAttribute="bottom" constant="96" id="iYn-Qh-deb"/>
                             <constraint firstItem="9tf-Vm-hEW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="iaN-cF-Dh9"/>
                             <constraint firstItem="ihv-WF-HpI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="31" id="sBV-HZ-1U4"/>
                             <constraint firstItem="9tf-Vm-hEW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uNQ-zb-jye"/>
