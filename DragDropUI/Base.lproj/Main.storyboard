@@ -39,7 +39,7 @@
                                 </constraints>
                                 <state key="normal" title="Drag Drop"/>
                             </button>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHa-XQ-Jwp" customClass="DDLabel" customModule="DragDropUI" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHa-XQ-Jwp" customClass="DDLabel" customModule="DragDropUI" customModuleProvider="target">
                                 <rect key="frame" x="226" y="224" width="70" height="30"/>
                                 <color key="backgroundColor" red="0.97254901959999995" green="0.37647058820000001" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -50,11 +50,20 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apple_logo" translatesAutoresizingMaskIntoConstraints="NO" id="HpV-8w-6Q7" customClass="DDImageView" customModule="DragDropUI" customModuleProvider="target">
+                                <rect key="frame" x="85" y="281" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="8dh-gr-DpD"/>
+                                    <constraint firstAttribute="height" constant="60" id="xuh-MC-IdM"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="pHa-XQ-Jwp" secondAttribute="trailing" constant="63" id="ADZ-CW-3No"/>
                             <constraint firstItem="ihv-WF-HpI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="155" id="Anq-M3-cbH"/>
+                            <constraint firstItem="HpV-8w-6Q7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="85" id="GL4-cU-Hqm"/>
+                            <constraint firstItem="HpV-8w-6Q7" firstAttribute="top" secondItem="ihv-WF-HpI" secondAttribute="bottom" constant="66" id="ZWr-WR-SQw"/>
                             <constraint firstItem="pHa-XQ-Jwp" firstAttribute="top" secondItem="9tf-Vm-hEW" secondAttribute="bottom" constant="96" id="iYn-Qh-deb"/>
                             <constraint firstItem="9tf-Vm-hEW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="iaN-cF-Dh9"/>
                             <constraint firstItem="ihv-WF-HpI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="31" id="sBV-HZ-1U4"/>
@@ -66,4 +75,7 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="apple_logo" width="60" height="60"/>
+    </resources>
 </document>
