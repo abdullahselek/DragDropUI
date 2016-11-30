@@ -44,6 +44,7 @@ class DDLabel: UILabel, DDProtocol {
 
     override public func didMoveToSuperview() {
         if self.superview != nil {
+            self.isUserInteractionEnabled = true
             self.registerGesture()
         } else {
             self.removeGesture()
