@@ -64,9 +64,6 @@ public extension DDProtocol where Self: UIView {
         case .began:
             self.draggedPoint = self.view.center
             self.parentView?.bringSubview(toFront: self.view)
-            if self.delegate != nil {
-                self.delegate!.viewWasDragged(view: self, draggedPoint: self.draggedPoint)
-            }
             break
         case .cancelled, .ended, .failed:
             if self.delegate != nil {
@@ -81,5 +78,8 @@ public extension DDProtocol where Self: UIView {
     func handlePan(panGesture: UIPanGestureRecognizer) {
         let translation = panGesture.translation(in: self.parentView)
         self.view.center = CGPoint(x: self.draggedPoint.x + translation.x, y: self.draggedPoint.y + translation.y)
+        if self.delegate != nil {
+            self.delegate!.viewWasDragged(view: self, draggedPoint: self.view.center)
+        }
     }
 }
