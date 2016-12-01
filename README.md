@@ -6,7 +6,7 @@
 A set of iOS UI components which have drop &amp; drop capability.
 
 # Requirements
-iOS 8.0+
+iOS 8.0+ & Swift 3
 
 # CocoaPods
 
