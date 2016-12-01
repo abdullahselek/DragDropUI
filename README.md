@@ -1,8 +1,36 @@
 ![Build Status](https://travis-ci.org/abdullahselek/DragDropUI.svg?branch=master)
+![CocoaPods Compatible](https://img.shields.io/cocoapods/v/DragDropUI.svg)
 [![Coverage Status](https://coveralls.io/repos/github/abdullahselek/DragDropUI/badge.svg?branch=master)](https://coveralls.io/github/abdullahselek/DragDropUI?branch=master)
 
 # DragDropUI
 A set of iOS UI components which have drop &amp; drop capability.
+
+# Requirements
+iOS 8.0+
+
+# CocoaPods
+
+CocoaPods is a dependency manager for Cocoa projects. You can install it with the following command:
+
+```
+$ gem install cocoapods
+```
+
+To integrate DragDropUI into your Xcode project using CocoaPods, specify it in your Podfile:
+
+```
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+use_frameworks!
+
+target '<Your Target Name>' do
+	pod 'DragDropUI', '~> 0.2'
+end
+```
+
+Then, run the following command:
+
+	$ pod install
 
 ## For the first version of DragDropUI contains
 
