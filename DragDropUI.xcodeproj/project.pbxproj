@@ -21,6 +21,10 @@
 		A4BE1C131DEF7A6F000AFF40 /* DDButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BE1C121DEF7A6F000AFF40 /* DDButton.swift */; };
 		A4BE1C151DEF7EAC000AFF40 /* DDLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BE1C141DEF7EAC000AFF40 /* DDLabel.swift */; };
 		A4BE1C171DEF8026000AFF40 /* DDImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BE1C161DEF8026000AFF40 /* DDImageView.swift */; };
+		A4F58F611DF0BB1C00BCAB13 /* DDButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F58F601DF0BB1C00BCAB13 /* DDButtonTests.swift */; };
+		A4F58F631DF0BBB100BCAB13 /* DDLabellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F58F621DF0BBB100BCAB13 /* DDLabellTests.swift */; };
+		A4F58F651DF0BC2B00BCAB13 /* DDImageViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F58F641DF0BC2B00BCAB13 /* DDImageViewTests.swift */; };
+		A4F58F671DF0BCCA00BCAB13 /* DD+ViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F58F661DF0BCCA00BCAB13 /* DD+ViewTests.swift */; };
 		F60415B2E687CE2E90ADFFD3 /* Pods_DragDropUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FCA3FAFB636F325744E3A35 /* Pods_DragDropUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +59,10 @@
 		A4BE1C121DEF7A6F000AFF40 /* DDButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DDButton.swift; path = Source/DDButton.swift; sourceTree = "<group>"; };
 		A4BE1C141DEF7EAC000AFF40 /* DDLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DDLabel.swift; path = Source/DDLabel.swift; sourceTree = "<group>"; };
 		A4BE1C161DEF8026000AFF40 /* DDImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DDImageView.swift; path = Source/DDImageView.swift; sourceTree = "<group>"; };
+		A4F58F601DF0BB1C00BCAB13 /* DDButtonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDButtonTests.swift; sourceTree = "<group>"; };
+		A4F58F621DF0BBB100BCAB13 /* DDLabellTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDLabellTests.swift; sourceTree = "<group>"; };
+		A4F58F641DF0BC2B00BCAB13 /* DDImageViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDImageViewTests.swift; sourceTree = "<group>"; };
+		A4F58F661DF0BCCA00BCAB13 /* DD+ViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DD+ViewTests.swift"; sourceTree = "<group>"; };
 		BF780DB903A875FEA2B00B4C /* Pods-DragDropUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragDropUI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DragDropUI/Pods-DragDropUI.debug.xcconfig"; sourceTree = "<group>"; };
 		DA73146253FAA0DF4B5F5E41 /* Pods-DragDropUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragDropUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DragDropUITests/Pods-DragDropUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E437CD21FEFB9364CE4BAA59 /* Pods-DragDropUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragDropUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DragDropUITests/Pods-DragDropUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +126,10 @@
 			isa = PBXGroup;
 			children = (
 				A4932B7E1DD7530900D3839E /* DDViewTests.swift */,
+				A4F58F601DF0BB1C00BCAB13 /* DDButtonTests.swift */,
+				A4F58F621DF0BBB100BCAB13 /* DDLabellTests.swift */,
+				A4F58F641DF0BC2B00BCAB13 /* DDImageViewTests.swift */,
+				A4F58F661DF0BCCA00BCAB13 /* DD+ViewTests.swift */,
 				A42E189B1DCF2DBD008913BD /* Info.plist */,
 			);
 			path = DragDropUITests;
@@ -377,6 +389,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4932B7F1DD7530900D3839E /* DDViewTests.swift in Sources */,
+				A4F58F671DF0BCCA00BCAB13 /* DD+ViewTests.swift in Sources */,
+				A4F58F611DF0BB1C00BCAB13 /* DDButtonTests.swift in Sources */,
+				A4F58F651DF0BC2B00BCAB13 /* DDImageViewTests.swift in Sources */,
+				A4F58F631DF0BBB100BCAB13 /* DDLabellTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
