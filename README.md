@@ -10,6 +10,7 @@ A set of iOS UI components which have drop &amp; drop capability.
 - DDButton
 - DDImageView
 - DDLabel
+- DDTableViewCell
 
 which are the most common used ui components for drop &amp; drop. With the next versions will add more
 ui components.
@@ -18,14 +19,14 @@ ui components.
 
 ### If you prefer adding with code it is also enabled. Creating with frame and then adding contrants is enough!
 
-# Example Usage
+## Example Usage
 
 ```
 @IBOutlet weak var draggableView: DDView!
 
 override func viewDidLoad() {
 	super.viewDidLoad()
-    draggableView.delegate = self
+    draggableView.delegate = self // it is optional to catch drag and drop points
 }
 ```
 
@@ -39,4 +40,28 @@ func viewWasDragged(view: UIView, draggedPoint: CGPoint) {
 func viewWasDropped(view: UIView, droppedPoint: CGPoint) {
     print("Dropped Point : ", droppedPoint)
 }
+```
+
+```
+MIT License
+
+Copyright (c) 2016 Abdullah Selek
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 ```
