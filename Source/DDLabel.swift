@@ -27,7 +27,7 @@
 
 import UIKit
 
-class DDLabel: UILabel, DDProtocol {
+public class DDLabel: UILabel, DDProtocol {
 
     public var draggedPoint: CGPoint = CGPoint.zero
     public var delegate: DDViewDelegate?

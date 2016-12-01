@@ -27,14 +27,14 @@
 
 import UIKit
 
-class DDTableViewCell: UITableViewCell, DDProtocol {
+public class DDTableViewCell: UITableViewCell, DDProtocol {
 
     public var draggedPoint: CGPoint = CGPoint.zero
     public var delegate: DDViewDelegate?
 
     var initialLocation: CGPoint = CGPoint.zero
 
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         super.awakeFromNib()
     }
 

@@ -27,7 +27,7 @@
 
 import UIKit
 
-class DDButton: UIButton, DDProtocol {
+public class DDButton: UIButton, DDProtocol {
 
     public var draggedPoint: CGPoint = CGPoint.zero
     public var delegate: DDViewDelegate?
