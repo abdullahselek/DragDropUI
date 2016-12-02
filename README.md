@@ -24,7 +24,7 @@ platform :ios, '8.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-	pod 'DragDropUI', '~> 0.2'
+	pod 'DragDropUI', '~> 0.3'
 end
 ```
 
@@ -39,6 +39,7 @@ Then, run the following command:
 - DDImageView
 - DDLabel
 - DDTableViewCell
+- DDCollectionViewCell
 
 which are the most common used ui components for drop &amp; drop. With the next versions will add more
 ui components.
