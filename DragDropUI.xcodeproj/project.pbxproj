@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		932EB7BCF01AD470699A6E56 /* Pods_DragDropUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 635F35D602743F903596C2F5 /* Pods_DragDropUI.framework */; };
+		A4050A3B1DF21147004789FC /* DDCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4050A3A1DF21147004789FC /* DDCollectionViewCell.swift */; };
 		A42E18851DCF2DBD008913BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42E18841DCF2DBD008913BD /* AppDelegate.swift */; };
 		A42E18871DCF2DBD008913BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42E18861DCF2DBD008913BD /* ViewController.swift */; };
 		A42E188A1DCF2DBD008913BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A42E18881DCF2DBD008913BD /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		3FCA3FAFB636F325744E3A35 /* Pods_DragDropUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DragDropUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		635F35D602743F903596C2F5 /* Pods_DragDropUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DragDropUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D01968AAB3317909B6013CA /* Pods-DragDropUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragDropUI.release.xcconfig"; path = "Pods/Target Support Files/Pods-DragDropUI/Pods-DragDropUI.release.xcconfig"; sourceTree = "<group>"; };
+		A4050A3A1DF21147004789FC /* DDCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DDCollectionViewCell.swift; path = Source/DDCollectionViewCell.swift; sourceTree = "<group>"; };
 		A42E18811DCF2DBD008913BD /* DragDropUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragDropUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A42E18841DCF2DBD008913BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A42E18861DCF2DBD008913BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				A4BE1C141DEF7EAC000AFF40 /* DDLabel.swift */,
 				A4BE1C161DEF8026000AFF40 /* DDImageView.swift */,
 				A4F58F6A1DF0C70300BCAB13 /* DDTableViewCell.swift */,
+				A4050A3A1DF21147004789FC /* DDCollectionViewCell.swift */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 				A4BE1C0B1DEF6585000AFF40 /* DDProtocol.swift in Sources */,
 				A4BE1C131DEF7A6F000AFF40 /* DDButton.swift in Sources */,
 				A42E18851DCF2DBD008913BD /* AppDelegate.swift in Sources */,
+				A4050A3B1DF21147004789FC /* DDCollectionViewCell.swift in Sources */,
 				A4932B7D1DD751B800D3839E /* DD+View.swift in Sources */,
 				A4F58F6B1DF0C70300BCAB13 /* DDTableViewCell.swift in Sources */,
 				A4BE1C171DEF8026000AFF40 /* DDImageView.swift in Sources */,
