@@ -3,7 +3,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/abdullahselek/DragDropUI/badge.svg?branch=master)](https://coveralls.io/github/abdullahselek/DragDropUI?branch=master)
 
 # DragDropUI
-A set of iOS UI components which have drop &amp; drop capability.
+A set of iOS UI components which have drag &amp; drop capability.
 
 # Requirements
 iOS 8.0+ & Swift 3
@@ -69,6 +69,8 @@ func viewWasDropped(view: UIView, droppedPoint: CGPoint) {
     print("Dropped Point : ", droppedPoint)
 }
 ```
+
+## License
 
 ```
 MIT License
