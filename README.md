@@ -8,10 +8,6 @@ A set of iOS UI components which have drag &amp; drop capability.
 # Requirements
 iOS 8.0+ & Swift 3
 
-# Sammple
-
-https://appetize.io/app/75d498bh2rvwyg7w2a4232v9km?device=iphone5s&scale=75&orientation=portrait&osVersion=9.3
-
 # CocoaPods
 
 CocoaPods is a dependency manager for Cocoa projects. You can install it with the following command:
