@@ -27,6 +27,18 @@
 		A4F58F651DF0BC2B00BCAB13 /* DDImageViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F58F641DF0BC2B00BCAB13 /* DDImageViewTests.swift */; };
 		A4F58F671DF0BCCA00BCAB13 /* DD+ViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F58F661DF0BCCA00BCAB13 /* DD+ViewTests.swift */; };
 		A4F58F6B1DF0C70300BCAB13 /* DDTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F58F6A1DF0C70300BCAB13 /* DDTableViewCell.swift */; };
+		A4FB40221DFC183F0096B672 /* DragDropUIFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = A4FB40201DFC183F0096B672 /* DragDropUIFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A4FB40251DFC183F0096B672 /* DragDropUIFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4FB401E1DFC183F0096B672 /* DragDropUIFramework.framework */; };
+		A4FB40261DFC183F0096B672 /* DragDropUIFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A4FB401E1DFC183F0096B672 /* DragDropUIFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A4FB402B1DFC184B0096B672 /* DDProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BE1C0A1DEF6585000AFF40 /* DDProtocol.swift */; };
+		A4FB402C1DFC184B0096B672 /* DDGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BE1C0C1DEF6752000AFF40 /* DDGestureRecognizer.swift */; };
+		A4FB402D1DFC184B0096B672 /* DD+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4932B7C1DD751B800D3839E /* DD+View.swift */; };
+		A4FB402E1DFC184B0096B672 /* DDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BE1C101DEF739C000AFF40 /* DDView.swift */; };
+		A4FB402F1DFC184B0096B672 /* DDButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BE1C121DEF7A6F000AFF40 /* DDButton.swift */; };
+		A4FB40301DFC184B0096B672 /* DDLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BE1C141DEF7EAC000AFF40 /* DDLabel.swift */; };
+		A4FB40311DFC184B0096B672 /* DDImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BE1C161DEF8026000AFF40 /* DDImageView.swift */; };
+		A4FB40321DFC184B0096B672 /* DDTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F58F6A1DF0C70300BCAB13 /* DDTableViewCell.swift */; };
+		A4FB40331DFC184B0096B672 /* DDCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4050A3A1DF21147004789FC /* DDCollectionViewCell.swift */; };
 		F60415B2E687CE2E90ADFFD3 /* Pods_DragDropUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FCA3FAFB636F325744E3A35 /* Pods_DragDropUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +50,28 @@
 			remoteGlobalIDString = A42E18801DCF2DBD008913BD;
 			remoteInfo = DragDropUI;
 		};
+		A4FB40231DFC183F0096B672 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A42E18791DCF2DBD008913BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4FB401D1DFC183F0096B672;
+			remoteInfo = DragDropUIFramework;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A4FB402A1DFC183F0096B672 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A4FB40261DFC183F0096B672 /* DragDropUIFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3FCA3FAFB636F325744E3A35 /* Pods_DragDropUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DragDropUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +100,9 @@
 		A4F58F641DF0BC2B00BCAB13 /* DDImageViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDImageViewTests.swift; sourceTree = "<group>"; };
 		A4F58F661DF0BCCA00BCAB13 /* DD+ViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DD+ViewTests.swift"; sourceTree = "<group>"; };
 		A4F58F6A1DF0C70300BCAB13 /* DDTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DDTableViewCell.swift; path = Source/DDTableViewCell.swift; sourceTree = "<group>"; };
+		A4FB401E1DFC183F0096B672 /* DragDropUIFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DragDropUIFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4FB40201DFC183F0096B672 /* DragDropUIFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DragDropUIFramework.h; sourceTree = "<group>"; };
+		A4FB40211DFC183F0096B672 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF780DB903A875FEA2B00B4C /* Pods-DragDropUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragDropUI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DragDropUI/Pods-DragDropUI.debug.xcconfig"; sourceTree = "<group>"; };
 		DA73146253FAA0DF4B5F5E41 /* Pods-DragDropUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragDropUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DragDropUITests/Pods-DragDropUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E437CD21FEFB9364CE4BAA59 /* Pods-DragDropUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragDropUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DragDropUITests/Pods-DragDropUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -77,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4FB40251DFC183F0096B672 /* DragDropUIFramework.framework in Frameworks */,
 				932EB7BCF01AD470699A6E56 /* Pods_DragDropUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,6 +126,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A4FB401A1DFC183F0096B672 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -98,6 +142,7 @@
 				A42E18A41DCF2E89008913BD /* Source */,
 				A42E18831DCF2DBD008913BD /* DragDropUI */,
 				A42E18981DCF2DBD008913BD /* DragDropUITests */,
+				A4FB401F1DFC183F0096B672 /* DragDropUIFramework */,
 				A42E18821DCF2DBD008913BD /* Products */,
 				FA04426D13A160C1D85F3691 /* Pods */,
 				BBA92748B2C08355E23311D9 /* Frameworks */,
@@ -109,6 +154,7 @@
 			children = (
 				A42E18811DCF2DBD008913BD /* DragDropUI.app */,
 				A42E18951DCF2DBD008913BD /* DragDropUITests.xctest */,
+				A4FB401E1DFC183F0096B672 /* DragDropUIFramework.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -155,6 +201,15 @@
 			name = Source;
 			sourceTree = "<group>";
 		};
+		A4FB401F1DFC183F0096B672 /* DragDropUIFramework */ = {
+			isa = PBXGroup;
+			children = (
+				A4FB40201DFC183F0096B672 /* DragDropUIFramework.h */,
+				A4FB40211DFC183F0096B672 /* Info.plist */,
+			);
+			path = DragDropUIFramework;
+			sourceTree = "<group>";
+		};
 		BBA92748B2C08355E23311D9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +232,17 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		A4FB401B1DFC183F0096B672 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4FB40221DFC183F0096B672 /* DragDropUIFramework.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		A42E18801DCF2DBD008913BD /* DragDropUI */ = {
 			isa = PBXNativeTarget;
@@ -188,10 +254,12 @@
 				A42E187F1DCF2DBD008913BD /* Resources */,
 				736483C13A0421D354861164 /* [CP] Embed Pods Frameworks */,
 				E7AABDF9C997C59A1AEA07F0 /* [CP] Copy Pods Resources */,
+				A4FB402A1DFC183F0096B672 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A4FB40241DFC183F0096B672 /* PBXTargetDependency */,
 			);
 			name = DragDropUI;
 			productName = DragDropUI;
@@ -219,6 +287,24 @@
 			productReference = A42E18951DCF2DBD008913BD /* DragDropUITests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		A4FB401D1DFC183F0096B672 /* DragDropUIFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4FB40291DFC183F0096B672 /* Build configuration list for PBXNativeTarget "DragDropUIFramework" */;
+			buildPhases = (
+				A4FB40191DFC183F0096B672 /* Sources */,
+				A4FB401A1DFC183F0096B672 /* Frameworks */,
+				A4FB401B1DFC183F0096B672 /* Headers */,
+				A4FB401C1DFC183F0096B672 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DragDropUIFramework;
+			productName = DragDropUIFramework;
+			productReference = A4FB401E1DFC183F0096B672 /* DragDropUIFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -239,6 +325,11 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = A42E18801DCF2DBD008913BD;
 					};
+					A4FB401D1DFC183F0096B672 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 5EHDAGHZ78;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = A42E187C1DCF2DBD008913BD /* Build configuration list for PBXProject "DragDropUI" */;
@@ -256,6 +347,7 @@
 			targets = (
 				A42E18801DCF2DBD008913BD /* DragDropUI */,
 				A42E18941DCF2DBD008913BD /* DragDropUITests */,
+				A4FB401D1DFC183F0096B672 /* DragDropUIFramework */,
 			);
 		};
 /* End PBXProject section */
@@ -272,6 +364,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A42E18931DCF2DBD008913BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4FB401C1DFC183F0096B672 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -404,6 +503,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A4FB40191DFC183F0096B672 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4FB402B1DFC184B0096B672 /* DDProtocol.swift in Sources */,
+				A4FB402C1DFC184B0096B672 /* DDGestureRecognizer.swift in Sources */,
+				A4FB402D1DFC184B0096B672 /* DD+View.swift in Sources */,
+				A4FB402E1DFC184B0096B672 /* DDView.swift in Sources */,
+				A4FB402F1DFC184B0096B672 /* DDButton.swift in Sources */,
+				A4FB40301DFC184B0096B672 /* DDLabel.swift in Sources */,
+				A4FB40311DFC184B0096B672 /* DDImageView.swift in Sources */,
+				A4FB40321DFC184B0096B672 /* DDTableViewCell.swift in Sources */,
+				A4FB40331DFC184B0096B672 /* DDCollectionViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -411,6 +526,11 @@
 			isa = PBXTargetDependency;
 			target = A42E18801DCF2DBD008913BD /* DragDropUI */;
 			targetProxy = A42E18961DCF2DBD008913BD /* PBXContainerItemProxy */;
+		};
+		A4FB40241DFC183F0096B672 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4FB401D1DFC183F0096B672 /* DragDropUIFramework */;
+			targetProxy = A4FB40231DFC183F0096B672 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -533,6 +653,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BF780DB903A875FEA2B00B4C /* Pods-DragDropUI.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5EHDAGHZ78;
 				INFOPLIST_FILE = DragDropUI/Info.plist;
@@ -548,6 +669,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8D01968AAB3317909B6013CA /* Pods-DragDropUI.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5EHDAGHZ78;
 				INFOPLIST_FILE = DragDropUI/Info.plist;
@@ -589,6 +711,52 @@
 			};
 			name = Release;
 		};
+		A4FB40271DFC183F0096B672 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5EHDAGHZ78;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DragDropUIFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.abdullahselek.DragDropUIFramework;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A4FB40281DFC183F0096B672 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5EHDAGHZ78;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DragDropUIFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.abdullahselek.DragDropUIFramework;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -618,6 +786,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		A4FB40291DFC183F0096B672 /* Build configuration list for PBXNativeTarget "DragDropUIFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4FB40271DFC183F0096B672 /* Debug */,
+				A4FB40281DFC183F0096B672 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
