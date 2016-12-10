@@ -1,5 +1,6 @@
 ![Build Status](https://travis-ci.org/abdullahselek/DragDropUI.svg?branch=master)
 ![CocoaPods Compatible](https://img.shields.io/cocoapods/v/DragDropUI.svg)
+[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Coverage Status](https://coveralls.io/repos/github/abdullahselek/DragDropUI/badge.svg?branch=master)](https://coveralls.io/github/abdullahselek/DragDropUI?branch=master)
 
 # DragDropUI
@@ -31,6 +32,25 @@ end
 Then, run the following command:
 
 	$ pod install
+
+# Carthage
+
+Carthage is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
+
+You can install Carthage with Homebrew using the following command:
+
+```
+brew update
+brew install carthage
+```
+
+To integrate DragDropUI into your Xcode project using Carthage, specify it in your Cartfile:
+
+```
+github "abdullahselek/DragDropUI" ~> 1.0
+```
+
+Run carthage update to build the framework and drag the built DragDropUI.framework into your Xcode project.
 
 ## For the first version of DragDropUI contains
 
