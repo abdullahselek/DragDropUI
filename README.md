@@ -4,12 +4,12 @@
 [![Coverage Status](https://coveralls.io/repos/github/abdullahselek/DragDropUI/badge.svg?branch=master)](https://coveralls.io/github/abdullahselek/DragDropUI?branch=master)
 
 # DragDropUI
-A set of iOS UI components which have drag &amp; drop capability.
+A set of iOS UI components which have drag &amp; drop capability. There is also a information [link](http://gargo.of.by/dragdropui/) which is translated to Russian by @gerchicov-bp.
 
-# Requirements
+## Requirements
 iOS 8.0+ & Swift 3
 
-# CocoaPods
+## CocoaPods
 
 CocoaPods is a dependency manager for Cocoa projects. You can install it with the following command:
 
@@ -33,7 +33,7 @@ Then, run the following command:
 
 	$ pod install
 
-# Carthage
+## Carthage
 
 Carthage is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
 
