@@ -1,7 +1,6 @@
 ![Build Status](https://travis-ci.org/abdullahselek/DragDropUI.svg?branch=master)
 ![CocoaPods Compatible](https://img.shields.io/cocoapods/v/DragDropUI.svg)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![Coverage Status](https://coveralls.io/repos/github/abdullahselek/DragDropUI/badge.svg?branch=master)](https://coveralls.io/github/abdullahselek/DragDropUI?branch=master)
 
 # DragDropUI
 A set of iOS UI components which have drag &amp; drop capability. There is also a information [link](http://gargo.of.by/dragdropui/) which is translated to Russian by @gerchicov-bp.
