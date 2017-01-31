@@ -53,13 +53,13 @@ Run carthage update to build the framework and drag the built DragDropUI.framewo
 
 ## For the first version of DragDropUI contains
 
-- DDView
-- DDButton
-- DDImageView
-- DDLabel
-- DDTableViewCell
-- DDCollectionViewCell
-- DDTextField
+[x] DDView
+[x] DDButton
+[x] DDImageView
+[x] DDLabel
+[x] DDTableViewCell
+[x] DDCollectionViewCell
+[x] DDTextField
 
 which are the most common used ui components for drop &amp; drop. With the next versions will add more
 ui components.
