@@ -62,7 +62,7 @@ class DD_ViewTests: QuickSpec {
                 it("should trigger its delegate when it is set and on state cancel", closure: {
                     let viewController = TestViewController()
                     let view = DDView(frame:  CGRect(x: 0.0, y: 0.0, width: 200.0, height: 40.0))
-                    view.delegate = viewController
+                    view.ddDelegate = viewController
                     viewController.view.addSubview(view)
                     view.didPress(pressGesture: LongPressGestureRecognizerStubStateCancel())
                     expect(viewController.wasDropped).to(beTrue())
@@ -72,7 +72,7 @@ class DD_ViewTests: QuickSpec {
                 it("should trigger its delegate when it is set", closure: {
                     let viewController = TestViewController()
                     let view = DDView(frame:  CGRect(x: 0.0, y: 0.0, width: 200.0, height: 40.0))
-                    view.delegate = viewController
+                    view.ddDelegate = viewController
                     viewController.view.addSubview(view)
                     view.handlePan(panGesture: UIPanGestureRecognizer())
                     expect(viewController.wasDragged).to(beTrue())

@@ -30,7 +30,7 @@ import UIKit
 public class DDImageView: UIImageView, DDProtocol {
 
     public var draggedPoint: CGPoint = CGPoint.zero
-    public var delegate: DDViewDelegate?
+    public var ddDelegate: DDViewDelegate?
 
     var initialLocation: CGPoint = CGPoint.zero
 

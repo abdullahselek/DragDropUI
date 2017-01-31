@@ -1,9 +1,9 @@
 //
-//  DDButton.swift
+//  DDTextField.swift
 //  DragDropUI
 //
-//  Created by Abdullah Selek on 30/11/2016.
-//  Copyright © 2016 Abdullah Selek. All rights reserved.
+//  Created by Abdullah Selek on 31/01/2017.
+//  Copyright © 2017 Abdullah Selek. All rights reserved.
 //
 //  MIT License
 //
@@ -27,7 +27,7 @@
 
 import UIKit
 
-public class DDButton: UIButton, DDProtocol {
+public class DDTextField: UITextField, DDProtocol {
 
     public var draggedPoint: CGPoint = CGPoint.zero
     public var ddDelegate: DDViewDelegate?
@@ -49,5 +49,5 @@ public class DDButton: UIButton, DDProtocol {
             self.removeGesture()
         }
     }
-    
+
 }

@@ -14,7 +14,7 @@ class ViewController: UIViewController, DDViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        draggableView.delegate = self
+        draggableView.ddDelegate = self
     }
 
     // MARK: DDViewDelegate

@@ -37,7 +37,7 @@ public protocol DDViewDelegate {
 
 public protocol DDProtocol: class {
 
-    var delegate: DDViewDelegate? { get set }
+    var ddDelegate: DDViewDelegate? { get set }
 
     var view: UIView { get }
     var draggedPoint: CGPoint { get set }
