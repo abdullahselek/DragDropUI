@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
     s.name                = 'DragDropUI'
-    s.version             = '1.0'
+    s.version             = '1.0.1'
     s.summary             = 'A set of iOS UI components which have drop & drop capability'
     s.homepage            = 'https://github.com/abdullahselek/DragDropUI'
     s.license             = {
