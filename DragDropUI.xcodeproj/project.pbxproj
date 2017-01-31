@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		932EB7BCF01AD470699A6E56 /* Pods_DragDropUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 635F35D602743F903596C2F5 /* Pods_DragDropUI.framework */; };
 		A4030BDD1E412E04007502FC /* DDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4030BDC1E412E04007502FC /* DDTextField.swift */; };
+		A4030BDF1E41305C007502FC /* DDTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4030BDE1E41305C007502FC /* DDTextFieldTests.swift */; };
 		A4050A3B1DF21147004789FC /* DDCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4050A3A1DF21147004789FC /* DDCollectionViewCell.swift */; };
 		A42E18851DCF2DBD008913BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42E18841DCF2DBD008913BD /* AppDelegate.swift */; };
 		A42E18871DCF2DBD008913BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42E18861DCF2DBD008913BD /* ViewController.swift */; };
@@ -79,6 +80,7 @@
 		635F35D602743F903596C2F5 /* Pods_DragDropUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DragDropUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D01968AAB3317909B6013CA /* Pods-DragDropUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragDropUI.release.xcconfig"; path = "Pods/Target Support Files/Pods-DragDropUI/Pods-DragDropUI.release.xcconfig"; sourceTree = "<group>"; };
 		A4030BDC1E412E04007502FC /* DDTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DDTextField.swift; path = Source/DDTextField.swift; sourceTree = "<group>"; };
+		A4030BDE1E41305C007502FC /* DDTextFieldTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDTextFieldTests.swift; sourceTree = "<group>"; };
 		A4050A3A1DF21147004789FC /* DDCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DDCollectionViewCell.swift; path = Source/DDCollectionViewCell.swift; sourceTree = "<group>"; };
 		A42E18811DCF2DBD008913BD /* DragDropUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragDropUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A42E18841DCF2DBD008913BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				A4F58F601DF0BB1C00BCAB13 /* DDButtonTests.swift */,
 				A4F58F621DF0BBB100BCAB13 /* DDLabellTests.swift */,
 				A4F58F641DF0BC2B00BCAB13 /* DDImageViewTests.swift */,
+				A4030BDE1E41305C007502FC /* DDTextFieldTests.swift */,
 				A42E189B1DCF2DBD008913BD /* Info.plist */,
 			);
 			path = DragDropUITests;
@@ -500,6 +503,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4932B7F1DD7530900D3839E /* DDViewTests.swift in Sources */,
+				A4030BDF1E41305C007502FC /* DDTextFieldTests.swift in Sources */,
 				A4F58F671DF0BCCA00BCAB13 /* DD+ViewTests.swift in Sources */,
 				A4F58F611DF0BB1C00BCAB13 /* DDButtonTests.swift in Sources */,
 				A4F58F651DF0BC2B00BCAB13 /* DDImageViewTests.swift in Sources */,
