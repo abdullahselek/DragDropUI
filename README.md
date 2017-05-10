@@ -1,4 +1,4 @@
-![Build Status](https://travis-ci.org/abdullahselek/DragDropUI.svg?branch=master)
+[![Build Status](https://travis-ci.org/abdullahselek/DragDropUI.svg?branch=master)](https://travis-ci.org/abdullahselek/DragDropUI)
 ![CocoaPods Compatible](https://img.shields.io/cocoapods/v/DragDropUI.svg)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
