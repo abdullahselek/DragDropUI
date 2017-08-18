@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A42E18801DCF2DBD008913BD"
-               BuildableName = "DragDropUI.app"
+               BlueprintIdentifier = "1C0BD63B1F46DD0F001A4201"
+               BuildableName = "DragDropUI.framework"
                BlueprintName = "DragDropUI"
                ReferencedContainer = "container:DragDropUI.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A42E18941DCF2DBD008913BD"
+               BlueprintIdentifier = "1C0BD6431F46DD0F001A4201"
                BuildableName = "DragDropUITests.xctest"
                BlueprintName = "DragDropUITests"
                ReferencedContainer = "container:DragDropUI.xcodeproj">
@@ -43,8 +43,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A42E18801DCF2DBD008913BD"
-            BuildableName = "DragDropUI.app"
+            BlueprintIdentifier = "1C0BD63B1F46DD0F001A4201"
+            BuildableName = "DragDropUI.framework"
             BlueprintName = "DragDropUI"
             ReferencedContainer = "container:DragDropUI.xcodeproj">
          </BuildableReference>
@@ -66,8 +66,8 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A42E18801DCF2DBD008913BD"
-            BuildableName = "DragDropUI.app"
+            BlueprintIdentifier = "1C0BD63B1F46DD0F001A4201"
+            BuildableName = "DragDropUI.framework"
             BlueprintName = "DragDropUI"
             ReferencedContainer = "container:DragDropUI.xcodeproj">
          </BuildableReference>
@@ -85,8 +85,8 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A42E18801DCF2DBD008913BD"
-            BuildableName = "DragDropUI.app"
+            BlueprintIdentifier = "1C0BD63B1F46DD0F001A4201"
+            BuildableName = "DragDropUI.framework"
             BlueprintName = "DragDropUI"
             ReferencedContainer = "container:DragDropUI.xcodeproj">
          </BuildableReference>
