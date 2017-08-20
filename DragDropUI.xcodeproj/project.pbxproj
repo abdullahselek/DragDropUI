@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1C0BD6451F46DD0F001A4201 /* DragDropUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C0BD63C1F46DD0F001A4201 /* DragDropUI.framework */; };
-		1C0BD6541F46E036001A4201 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C0BD6531F46E036001A4201 /* Info.plist */; };
 		1C0BD65F1F46E0D4001A4201 /* DD+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0BD6551F46E0D4001A4201 /* DD+View.swift */; };
 		1C0BD6601F46E0D4001A4201 /* DDButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0BD6561F46E0D4001A4201 /* DDButton.swift */; };
 		1C0BD6611F46E0D4001A4201 /* DDCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0BD6571F46E0D4001A4201 /* DDCollectionViewCell.swift */; };
@@ -26,6 +25,7 @@
 		1C0BD6A61F46E331001A4201 /* DDImageViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F58F641DF0BC2B00BCAB13 /* DDImageViewTests.swift */; };
 		1C0BD6A71F46E331001A4201 /* DDTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4030BDE1E41305C007502FC /* DDTextFieldTests.swift */; };
 		7FD47001A68942896F5AEDCA /* Pods_DragDropUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 635F35D602743F903596C2F5 /* Pods_DragDropUI.framework */; };
+		A4836E491F4978AD000C93FF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4836E481F4978AD000C93FF /* Info.plist */; };
 		DF2CCA30AF03D1CCD97D4F28 /* Pods_DragDropUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FCA3FAFB636F325744E3A35 /* Pods_DragDropUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,11 +54,11 @@
 		1C0BD65D1F46E0D4001A4201 /* DDTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDTextField.swift; sourceTree = "<group>"; };
 		1C0BD65E1F46E0D4001A4201 /* DDView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDView.swift; sourceTree = "<group>"; };
 		1C0BD6691F46E129001A4201 /* DragDropUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DragDropUI.h; sourceTree = "<group>"; };
-		1C0BD68E1F46E2EC001A4201 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../aa/Info.plist; sourceTree = "<group>"; };
 		3FCA3FAFB636F325744E3A35 /* Pods_DragDropUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DragDropUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		635F35D602743F903596C2F5 /* Pods_DragDropUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DragDropUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D01968AAB3317909B6013CA /* Pods-DragDropUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragDropUI.release.xcconfig"; path = "Pods/Target Support Files/Pods-DragDropUI/Pods-DragDropUI.release.xcconfig"; sourceTree = "<group>"; };
 		A4030BDE1E41305C007502FC /* DDTextFieldTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDTextFieldTests.swift; sourceTree = "<group>"; };
+		A4836E481F4978AD000C93FF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4932B7E1DD7530900D3839E /* DDViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDViewTests.swift; sourceTree = "<group>"; };
 		A4F58F601DF0BB1C00BCAB13 /* DDButtonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDButtonTests.swift; sourceTree = "<group>"; };
 		A4F58F621DF0BBB100BCAB13 /* DDLabellTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDLabellTests.swift; sourceTree = "<group>"; };
@@ -93,6 +93,7 @@
 		1C0BD63D1F46DD0F001A4201 /* DragDropUI */ = {
 			isa = PBXGroup;
 			children = (
+				A4836E481F4978AD000C93FF /* Info.plist */,
 				1C0BD6691F46E129001A4201 /* DragDropUI.h */,
 				1C0BD6551F46E0D4001A4201 /* DD+View.swift */,
 				1C0BD6561F46E0D4001A4201 /* DDButton.swift */,
@@ -104,7 +105,6 @@
 				1C0BD65C1F46E0D4001A4201 /* DDTableViewCell.swift */,
 				1C0BD65D1F46E0D4001A4201 /* DDTextField.swift */,
 				1C0BD65E1F46E0D4001A4201 /* DDView.swift */,
-				1C0BD68E1F46E2EC001A4201 /* Info.plist */,
 			);
 			path = DragDropUI;
 			sourceTree = "<group>";
@@ -224,7 +224,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Abdullah Selek";
 				TargetAttributes = {
 					1C0BD63B1F46DD0F001A4201 = {
@@ -262,6 +262,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4836E491F4978AD000C93FF /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,7 +270,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C0BD6541F46E036001A4201 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +508,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -559,6 +560,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
