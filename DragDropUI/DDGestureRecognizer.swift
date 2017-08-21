@@ -62,21 +62,29 @@ extension UIGestureRecognizer {
     }
 
     private static var handlerKey: String = "handlerKey"
-    var handler: (UIGestureRecognizer) -> Void {
+    var handler: ((UIGestureRecognizer) -> Void)? {
         get {
-            let closureWrapper: DDClosureWrapper = objc_getAssociatedObject(self, &UIGestureRecognizer.handlerKey) as! DDClosureWrapper
+            guard let closureWrapper = objc_getAssociatedObject(self, &UIGestureRecognizer.handlerKey) as? DDClosureWrapper else {
+                return nil
+            }
             return closureWrapper.handler
         }
         set {
+            guard let gestureHandler = newValue else {
+                return
+            }
             self.addTarget(self, action: #selector(UIGestureRecognizer.handleAction))
             self.multiDelegate = DDGestureDelegate()
             self.delegate = self.multiDelegate
-            objc_setAssociatedObject(self, &UIGestureRecognizer.handlerKey, DDClosureWrapper(handler: newValue), objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &UIGestureRecognizer.handlerKey, DDClosureWrapper(handler: gestureHandler), objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
 
     public func handleAction() {
-        self.handler(self)
+        guard let handler = self.handler else {
+            return
+        }
+        handler(self)
     }
 
 }
