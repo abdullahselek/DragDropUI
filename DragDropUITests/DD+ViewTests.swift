@@ -54,7 +54,7 @@ class DD_ViewTests: QuickSpec {
                     let view = DDView(frame:  CGRect(x: 0.0, y: 0.0, width: 200.0, height: 40.0))
                     expect(view.draggedPoint).to(equal(CGPoint(x: 0.0, y: 0.0)))
                     viewController.view.addSubview(view)
-                    view.didPress(pressGesture: LongPressGestureRecognizerStubStateBegan())
+                    view.didPress(pressGesture: LongPressGestureRecognizerStateBeganFake())
                     expect(view.draggedPoint).to(equal(CGPoint(x: 100.0, y: 20.0)))
                 })
             })
@@ -64,7 +64,7 @@ class DD_ViewTests: QuickSpec {
                     let view = DDView(frame:  CGRect(x: 0.0, y: 0.0, width: 200.0, height: 40.0))
                     view.ddDelegate = viewController
                     viewController.view.addSubview(view)
-                    view.didPress(pressGesture: LongPressGestureRecognizerStubStateCancel())
+                    view.didPress(pressGesture: LongPressGestureRecognizerStateCancelFake())
                     expect(viewController.wasDropped).to(beTrue())
                 })
             })
@@ -83,7 +83,7 @@ class DD_ViewTests: QuickSpec {
     
 }
 
-class LongPressGestureRecognizerStubStateBegan: UILongPressGestureRecognizer {
+class LongPressGestureRecognizerStateBeganFake: UILongPressGestureRecognizer {
 
     override open var state: UIGestureRecognizerState {
         return .began
@@ -91,7 +91,7 @@ class LongPressGestureRecognizerStubStateBegan: UILongPressGestureRecognizer {
 
 }
 
-class LongPressGestureRecognizerStubStateCancel: UILongPressGestureRecognizer {
+class LongPressGestureRecognizerStateCancelFake: UILongPressGestureRecognizer {
 
     override open var state: UIGestureRecognizerState {
         return .cancelled
