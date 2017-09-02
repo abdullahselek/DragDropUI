@@ -33,48 +33,68 @@ import Nimble
 class DD_ViewTests: QuickSpec {
     
     override func spec() {
-        describe("DD_View", {
-            context("parentView", {
-                it("should return valid view when superview not nil", closure: {
-                    let viewController = UIViewController()
-                    let view = DDView(frame:  CGRect(x: 0.0, y: 0.0, width: 200.0, height: 40.0))
-                    viewController.view.addSubview(view)
-                    expect(view.parentView).notTo(beNil())
+        describe("DD+View Tests", {
+            var view: DDView!
+            var viewController: UIViewControllerFake!
+
+            beforeEach {
+                view = DDView(frame:  CGRect(x: 0.0, y: 0.0, width: 200.0, height: 40.0))
+                viewController = UIViewControllerFake()
+            }
+
+            describe(".parentView", {
+                context("when superview nil", {
+                    it("should return nil", closure: {
+                        expect(view.parentView).to(beNil())
+                    })
+                })
+
+                context("when superview not nil", {
+                    beforeEach {
+                        let viewController = UIViewController()
+                        viewController.view.addSubview(view)
+                    }
+
+                    it("should return valid view", closure: {
+                        expect(view.parentView).notTo(beNil())
+                    })
                 })
             })
-            context("parentView", {
-                it("should return nil when superview nil", closure: {
-                    let view = DDView(frame:  CGRect(x: 0.0, y: 0.0, width: 200.0, height: 40.0))
-                    expect(view.parentView).to(beNil())
+
+            describe(".didPress(pressGesture:)", {
+                context("when dragging start", {
+                    beforeEach {
+                        expect(view.draggedPoint).to(equal(CGPoint(x: 0.0, y: 0.0)))
+                        viewController.view.addSubview(view)
+                        view.didPress(pressGesture: LongPressGestureRecognizerStateBeganFake())
+                    }
+
+                    it("should set its dragged point on state began", closure: {
+                        expect(view.draggedPoint).to(equal(CGPoint(x: 100.0, y: 20.0)))
+                    })
+                })
+
+                context("when dragging stop", {
+                    beforeEach {
+                        view.ddDelegate = viewController
+                        viewController.view.addSubview(view)
+                        view.didPress(pressGesture: LongPressGestureRecognizerStateCancelFake())
+                    }
+
+                    it("should trigger its delegate when it is set and on state cancel", closure: {
+                        expect(viewController.wasDropped).to(beTrue())
+                    })
                 })
             })
-            context("didPress", {
-                it("should set its dragged point on state began", closure: {
-                    let viewController = UIViewController()
-                    let view = DDView(frame:  CGRect(x: 0.0, y: 0.0, width: 200.0, height: 40.0))
-                    expect(view.draggedPoint).to(equal(CGPoint(x: 0.0, y: 0.0)))
-                    viewController.view.addSubview(view)
-                    view.didPress(pressGesture: LongPressGestureRecognizerStateBeganFake())
-                    expect(view.draggedPoint).to(equal(CGPoint(x: 100.0, y: 20.0)))
-                })
-            })
-            context("didPress", {
-                it("should trigger its delegate when it is set and on state cancel", closure: {
-                    let viewController = TestViewController()
-                    let view = DDView(frame:  CGRect(x: 0.0, y: 0.0, width: 200.0, height: 40.0))
-                    view.ddDelegate = viewController
-                    viewController.view.addSubview(view)
-                    view.didPress(pressGesture: LongPressGestureRecognizerStateCancelFake())
-                    expect(viewController.wasDropped).to(beTrue())
-                })
-            })
-            context("handlePan", {
-                it("should trigger its delegate when it is set", closure: {
-                    let viewController = TestViewController()
-                    let view = DDView(frame:  CGRect(x: 0.0, y: 0.0, width: 200.0, height: 40.0))
+
+            describe(".handlePan(panGesture:)", {
+                beforeEach {
                     view.ddDelegate = viewController
                     viewController.view.addSubview(view)
                     view.handlePan(panGesture: UIPanGestureRecognizer())
+                }
+
+                it("should trigger its delegate when it is set", closure: {
                     expect(viewController.wasDragged).to(beTrue())
                 })
             })
@@ -99,7 +119,7 @@ class LongPressGestureRecognizerStateCancelFake: UILongPressGestureRecognizer {
     
 }
 
-class TestViewController: UIViewController, DDViewDelegate {
+class UIViewControllerFake: UIViewController, DDViewDelegate {
 
     var wasDragged = false
     var wasDropped = false
