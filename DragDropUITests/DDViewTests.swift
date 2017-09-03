@@ -31,32 +31,46 @@ import Nimble
 @testable import DragDropUI
 
 class DDViewTests: QuickSpec {
-    
+
     override func spec() {
-        describe("DragDropView", {
-            context("init with frame", {
+        describe("DDView Tests", {
+            var view: DDView!
+            var viewController: UIViewController!
+
+            beforeEach {
+                view = DDView(frame:  CGRect(x: 0.0, y: 0.0, width: 200.0, height: 40.0))
+                viewController = UIViewController()
+            }
+
+            describe(".init(frame:)", {
                 it("should initiate successfully", closure: {
-                    let view = DDView(frame:  CGRect(x: 0.0, y: 0.0, width: 200.0, height: 40.0))
                     expect(view).notTo(beNil())
                 })
             })
-            context("didMoveToSuperview", {
-                it("should have gesture recognizers if superview not nil", closure: {
-                    let viewController = UIViewController()
-                    let view = DDView(frame:  CGRect(x: 0.0, y: 0.0, width: 200.0, height: 40.0))
-                    viewController.view.addSubview(view)
-                    let _ = viewController.view
-                    expect(view.gestureRecognizers).to(haveCount(2))
+
+            describe(".didMoveToSuperview()", {
+                context("when superview not nil", {
+                    beforeEach {
+                        viewController.view.addSubview(view)
+                        let _ = viewController.view
+                    }
+
+                    it("should have gesture recognizers", closure: {
+                        expect(view.gestureRecognizers).to(haveCount(2))
+                    })
                 })
-            })
-            context("didMoveToSuperview", {
-                it("should not have gesture recognizers if superview nil", closure: {
-                    let view = DDView(frame:  CGRect(x: 0.0, y: 0.0, width: 200.0, height: 40.0))
-                    view.didMoveToSuperview()
-                    expect(view.gestureRecognizers).to(beNil())
+
+                context("when superview nil", {
+                    beforeEach {
+                        view.didMoveToSuperview()
+                    }
+
+                    it("should have no gesture recognizers", closure: {
+                        expect(view.gestureRecognizers).to(beNil())
+                    })
                 })
             })
         })
     }
-    
+
 }
