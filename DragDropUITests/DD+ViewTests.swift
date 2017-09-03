@@ -51,7 +51,6 @@ class DD_ViewTests: QuickSpec {
 
                 context("when superview not nil", {
                     beforeEach {
-                        let viewController = UIViewController()
                         viewController.view.addSubview(view)
                     }
 
