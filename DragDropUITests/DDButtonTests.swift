@@ -33,30 +33,43 @@ import Nimble
 class DDButtonTests: QuickSpec {
     
     override func spec() {
-        describe("DragDropButton", {
-            context("init with frame", {
+        describe("DragDropButton Tests", {
+            var button: DDButton!
+            var viewController: UIViewController!
+
+            beforeEach {
+                button = DDButton(frame:  CGRect(x: 0.0, y: 0.0, width: 200.0, height: 40.0))
+                viewController = UIViewController()
+            }
+
+            describe(".init(frame:)", {
                 it("should initiate successfully", closure: {
-                    let button = DDButton(frame:  CGRect(x: 0.0, y: 0.0, width: 200.0, height: 40.0))
                     expect(button).notTo(beNil())
                 })
             })
-            context("didMoveToSuperview", {
-                it("should have gesture recognizers if superview not nil", closure: {
-                    let viewController = UIViewController()
-                    let button = DDButton(frame:  CGRect(x: 0.0, y: 0.0, width: 200.0, height: 40.0))
-                    viewController.view.addSubview(button)
-                    let _ = viewController.view
-                    expect(button.gestureRecognizers).to(haveCount(2))
+
+            describe(".didMoveToSuperview()", {
+                context("when superview not nil", {
+                    beforeEach {
+                        viewController.view.addSubview(button)
+                        let _ = viewController.view
+                    }
+
+                    it("should have gesture recognizers", closure: {
+                        expect(button.gestureRecognizers).to(haveCount(2))
+                    })
                 })
-            })
-            context("didMoveToSuperview", {
-                it("should not have gesture recognizers if superview nil", closure: {
-                    let button = DDButton(frame:  CGRect(x: 0.0, y: 0.0, width: 200.0, height: 40.0))
-                    button.didMoveToSuperview()
-                    expect(button.gestureRecognizers).to(beNil())
+
+                context("when superview nil", {
+                    beforeEach {
+                        button.didMoveToSuperview()
+                    }
+
+                    it("should not have gesture recognizers", closure: {
+                        expect(button.gestureRecognizers).to(beNil())
+                    })
                 })
             })
         })
     }
-
 }
