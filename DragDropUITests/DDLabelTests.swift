@@ -30,7 +30,7 @@ import Nimble
 
 @testable import DragDropUI
 
-class DDLabellTests: QuickSpec {
+class DDLabelTests: QuickSpec {
     
     override func spec() {
         describe("DragDropLabel", {
