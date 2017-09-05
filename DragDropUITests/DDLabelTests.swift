@@ -33,30 +33,42 @@ import Nimble
 class DDLabelTests: QuickSpec {
     
     override func spec() {
-        describe("DragDropLabel", {
-            context("init with frame", {
+        describe("DDLabel Tests", {
+            var label: DDLabel!
+            var viewController: UIViewController!
+
+            beforeEach {
+                label = DDLabel(frame:  CGRect(x: 0.0, y: 0.0, width: 200.0, height: 40.0))
+                viewController = UIViewController()
+            }
+
+            describe(".init(frame:)", {
                 it("should initiate successfully", closure: {
-                    let label = DDLabel(frame:  CGRect(x: 0.0, y: 0.0, width: 200.0, height: 40.0))
                     expect(label).notTo(beNil())
                 })
             })
-            context("didMoveToSuperview", {
-                it("should have gesture recognizers if superview not nil", closure: {
-                    let viewController = UIViewController()
-                    let label = DDLabel(frame:  CGRect(x: 0.0, y: 0.0, width: 200.0, height: 40.0))
-                    viewController.view.addSubview(label)
-                    let _ = viewController.view
-                    expect(label.gestureRecognizers).to(haveCount(2))
+
+            describe("didMoveToSuperview", {
+                context("when superview not nil", {
+                    beforeEach {
+                        viewController.view.addSubview(label)
+                        let _ = viewController.view
+                    }
+
+                    it("should have gesture recognizers", closure: {
+                        expect(label.gestureRecognizers).to(haveCount(2))
+                    })
                 })
-            })
-            context("didMoveToSuperview", {
-                it("should not have gesture recognizers if superview nil", closure: {
-                    let label = DDLabel(frame:  CGRect(x: 0.0, y: 0.0, width: 200.0, height: 40.0))
-                    label.didMoveToSuperview()
-                    expect(label.gestureRecognizers).to(beNil())
+
+                context("when superview nil", {
+                    beforeEach {
+                        label.didMoveToSuperview()
+                    }
+                    it("should not have gesture recognizers", closure: {
+                        expect(label.gestureRecognizers).to(beNil())
+                    })
                 })
             })
         })
     }
-    
 }
