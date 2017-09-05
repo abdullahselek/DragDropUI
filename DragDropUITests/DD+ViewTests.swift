@@ -99,7 +99,6 @@ class DD_ViewTests: QuickSpec {
             })
         })
     }
-    
 }
 
 class LongPressGestureRecognizerStateBeganFake: UILongPressGestureRecognizer {

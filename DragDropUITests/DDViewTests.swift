@@ -72,5 +72,4 @@ class DDViewTests: QuickSpec {
             })
         })
     }
-
 }
