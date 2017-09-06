@@ -33,30 +33,43 @@ import Nimble
 class DDImageViewTests: QuickSpec {
     
     override func spec() {
-        describe("DDImageView", {
-            context("init with frame", {
+        describe("DDImageView Tests", {
+            var imageView: DDImageView!
+            var viewController: UIViewController!
+
+            beforeEach {
+                imageView = DDImageView(frame:  CGRect(x: 0.0, y: 0.0, width: 200.0, height: 40.0))
+                viewController = UIViewController()
+            }
+
+            describe(".init(frame:)", {
                 it("should initiate successfully", closure: {
-                    let imageView = DDImageView(frame:  CGRect(x: 0.0, y: 0.0, width: 200.0, height: 40.0))
                     expect(imageView).notTo(beNil())
                 })
             })
-            context("didMoveToSuperview", {
-                it("should have gesture recognizers if superview not nil", closure: {
-                    let viewController = UIViewController()
-                    let imageView = DDImageView(frame:  CGRect(x: 0.0, y: 0.0, width: 200.0, height: 40.0))
-                    viewController.view.addSubview(imageView)
-                    let _ = viewController.view
-                    expect(imageView.gestureRecognizers).to(haveCount(2))
+
+            describe(".didMoveToSuperview()", {
+                context("when superview not nil", {
+                    beforeEach {
+                        viewController.view.addSubview(imageView)
+                        let _ = viewController.view
+                    }
+
+                    it("should have gesture recognizers", closure: {
+                        expect(imageView.gestureRecognizers).to(haveCount(2))
+                    })
                 })
-            })
-            context("didMoveToSuperview", {
-                it("should not have gesture recognizers if superview nil", closure: {
-                    let imageView = DDImageView(frame:  CGRect(x: 0.0, y: 0.0, width: 200.0, height: 40.0))
-                    imageView.didMoveToSuperview()
-                    expect(imageView.gestureRecognizers).to(beNil())
+
+                context("when superview nil", {
+                    beforeEach {
+                        imageView.didMoveToSuperview()
+                    }
+
+                    it("should not have gesture recognizers", closure: {
+                        expect(imageView.gestureRecognizers).to(beNil())
+                    })
                 })
             })
         })
     }
-    
 }
