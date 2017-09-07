@@ -33,30 +33,42 @@ import Nimble
 class DDTextFieldTests: QuickSpec {
     
     override func spec() {
-        describe("DDTextField", {
-            context("init with frame", {
+        describe("DDTextField Tests", {
+            var textField: DDTextField!
+            var viewController: UIViewController!
+
+            beforeEach {
+                textField = DDTextField(frame:  CGRect(x: 0.0, y: 0.0, width: 200.0, height: 40.0))
+                viewController = UIViewController()
+            }
+
+            describe(".init(frame:)", {
                 it("should initiate successfully", closure: {
-                    let textField = DDTextField(frame:  CGRect(x: 0.0, y: 0.0, width: 200.0, height: 40.0))
                     expect(textField).notTo(beNil())
                 })
             })
-            context("didMoveToSuperview", {
-                it("should have gesture recognizers if superview not nil", closure: {
-                    let viewController = UIViewController()
-                    let textField = DDTextField(frame:  CGRect(x: 0.0, y: 0.0, width: 200.0, height: 40.0))
-                    viewController.view.addSubview(textField)
-                    let _ = viewController.view
-                    expect(textField.gestureRecognizers).to(haveCount(2))
+
+            describe(".didMoveToSuperview()", {
+                context("when superview not nil", {
+                    beforeEach {
+                        viewController.view.addSubview(textField)
+                        let _ = viewController.view
+                    }
+
+                    it("should have gesture recognizers", closure: {
+                        expect(textField.gestureRecognizers).to(haveCount(2))
+                    })
                 })
-            })
-            context("didMoveToSuperview", {
-                it("should not have gesture recognizers if superview nil", closure: {
-                    let textField = DDTextField(frame:  CGRect(x: 0.0, y: 0.0, width: 200.0, height: 40.0))
-                    textField.didMoveToSuperview()
-                    expect(textField.gestureRecognizers).to(beNil())
+                context("when if superview nil", {
+                    beforeEach {
+                        textField.didMoveToSuperview()
+                    }
+
+                    it("should not have gesture recognizer", closure: {
+                        expect(textField.gestureRecognizers).to(beNil())
+                    })
                 })
             })
         })
     }
-    
 }
