@@ -24,7 +24,7 @@ platform :ios, '8.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-	pod 'DragDropUI', '~> 1.0.1'
+	pod 'DragDropUI', '~> 1.0.2'
 end
 ```
 
@@ -46,12 +46,12 @@ brew install carthage
 To integrate DragDropUI into your Xcode project using Carthage, specify it in your Cartfile:
 
 ```
-github "abdullahselek/DragDropUI" ~> 1.0.1
+github "abdullahselek/DragDropUI" ~> 1.0.2
 ```
 
 Run carthage update to build the framework and drag the built DragDropUI.framework into your Xcode project.
 
-## For the first version of DragDropUI contains
+## DragDropUI contains
 
 - [x] DDView
 - [x] DDButton
@@ -60,9 +60,6 @@ Run carthage update to build the framework and drag the built DragDropUI.framewo
 - [x] DDTableViewCell
 - [x] DDCollectionViewCell
 - [x] DDTextField
-
-which are the most common used ui components for drop &amp; drop. With the next versions will add more
-ui components.
 
 ### It is so simple to use these components. You can just directly add them on storyboard or xib file and set its class with the DD ones.
 
