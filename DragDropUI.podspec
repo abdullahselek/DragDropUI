@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
         :tag => s.version.to_s
     }
     s.ios.deployment_target = '8.0'
-    s.source_files        = 'Source/*.swift'
+    s.source_files        = 'DragDropUI/*.{h,swift}'
     s.requires_arc        = true
 
 end
