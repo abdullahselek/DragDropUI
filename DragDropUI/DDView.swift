@@ -2,7 +2,6 @@
 //  DDView.swift
 //  DragDropUI
 //
-//  Created by Abdullah Selek on 30/11/2016.
 //  Copyright © 2016 Abdullah Selek. All rights reserved.
 //
 //  MIT License

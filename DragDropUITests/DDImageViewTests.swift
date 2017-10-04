@@ -2,7 +2,6 @@
 //  DDImageViewTests.swift
 //  DragDropUI
 //
-//  Created by Abdullah Selek on 01/12/2016.
 //  Copyright © 2016 Abdullah Selek. All rights reserved.
 //
 //  MIT License
