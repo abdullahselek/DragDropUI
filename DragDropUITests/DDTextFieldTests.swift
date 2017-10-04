@@ -50,22 +50,28 @@ class DDTextFieldTests: QuickSpec {
 
             describe(".didMoveToSuperview()", {
                 context("when superview not nil", {
+                    var gesturesCount = 0
+
                     beforeEach {
+                        gesturesCount = (textField.gestureRecognizers?.count)!
                         viewController.view.addSubview(textField)
                         let _ = viewController.view
                     }
 
-                    it("should have gesture recognizers", closure: {
-                        expect(textField.gestureRecognizers).to(haveCount(2))
+                    it("should have additional gesture recognizers", closure: {
+                        expect(textField.gestureRecognizers?.count).to(equal(gesturesCount + 2))
                     })
                 })
                 context("when if superview nil", {
+                    var gesturesCount = 0
+
                     beforeEach {
+                        gesturesCount = (textField.gestureRecognizers?.count)!
                         textField.didMoveToSuperview()
                     }
 
-                    it("should not have gesture recognizer", closure: {
-                        expect(textField.gestureRecognizers).to(beNil())
+                    it("should not have additioanl gesture recognizers", closure: {
+                        expect(textField.gestureRecognizers?.count).to(equal(gesturesCount))
                     })
                 })
             })

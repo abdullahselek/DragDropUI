@@ -80,7 +80,7 @@ extension UIGestureRecognizer {
         }
     }
 
-    public func handleAction() {
+    @objc public func handleAction() {
         guard let handler = self.handler else {
             return
         }
