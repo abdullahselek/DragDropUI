@@ -33,7 +33,6 @@ public extension DDProtocol where Self: UIView {
 
     func registerGesture() {
         let panGesture = UIPanGestureRecognizer()
-        panGesture.cancelsTouchesInView = false
         panGesture.handler = { gesture in
             self.handlePan(panGesture: gesture as! UIPanGestureRecognizer)
         }
