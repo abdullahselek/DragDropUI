@@ -40,6 +40,7 @@ public extension DDProtocol where Self: UIView {
         self.view.addGestureRecognizer(panGesture)
 
         let pressGesture = UILongPressGestureRecognizer()
+        pressGesture.cancelsTouchesInView = false
         pressGesture.minimumPressDuration = 0.001
         pressGesture.handler = { gesture in
             self.didPress(pressGesture: gesture as! UILongPressGestureRecognizer)
