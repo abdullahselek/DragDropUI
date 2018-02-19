@@ -36,7 +36,7 @@ public extension DDProtocol where Self: UIView {
         panGesture.handler = { gesture in
             self.handlePan(panGesture: gesture as! UIPanGestureRecognizer)
         }
-        
+
         self.view.addGestureRecognizer(panGesture)
 
         let pressGesture = UILongPressGestureRecognizer()
