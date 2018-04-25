@@ -1,0 +1,6 @@
+framework module DragDropUI {
+  umbrella header "DragDropUI-umbrella.h"
+
+  export *
+  module * { export * }
+}

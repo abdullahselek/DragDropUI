@@ -1,15 +1,27 @@
 PODS:
+  - DragDropUI (1.0.4)
   - Nimble (7.0.2)
   - Quick (1.2.0)
 
 DEPENDENCIES:
+  - DragDropUI (from `.`)
   - Nimble
   - Quick
 
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Nimble
+    - Quick
+
+EXTERNAL SOURCES:
+  DragDropUI:
+    :path: "."
+
 SPEC CHECKSUMS:
+  DragDropUI: 233cf21705c93852a1d71841018788ca7794bcce
   Nimble: bfe1f814edabba69ff145cb1283e04ed636a67f2
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
 
-PODFILE CHECKSUM: 457e33746bf09b10f3e51f723673c7b7dae12c40
+PODFILE CHECKSUM: cd7eb5a2407a39b38495db02a84a8abf14961e7e
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.0
