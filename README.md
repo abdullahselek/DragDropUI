@@ -73,23 +73,32 @@ Run carthage update to build the framework and drag the built DragDropUI.framewo
 ## Example Usage
 
 ```
-@IBOutlet weak var draggableView: DDView!
+import UIKit
+import DragDropUI
 
-override func viewDidLoad() {
-	super.viewDidLoad()
-    draggableView.delegate = self // it is optional to catch drag and drop points
+class ViewController: UIViewController {
+
+    @IBOutlet weak var draggableView: DDView!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        draggableView.ddDelegate = self
+    }
+
 }
 ```
 
 ```
-// MARK: DDViewDelegate
+extension ViewController: DDViewDelegate {
 
-func viewWasDragged(view: UIView, draggedPoint: CGPoint) {
-	print("Dragged Point : ", draggedPoint)
-}
+    func viewWasDragged(view: UIView, draggedPoint: CGPoint) {
+        print(NSStringFromCGPoint(draggedPoint))
+    }
 
-func viewWasDropped(view: UIView, droppedPoint: CGPoint) {
-    print("Dropped Point : ", droppedPoint)
+    func viewWasDropped(view: UIView, droppedPoint: CGPoint) {
+        print(NSStringFromCGPoint(droppedPoint))
+    }
+
 }
 ```
 
