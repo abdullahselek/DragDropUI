@@ -24,7 +24,7 @@
 		1C0BD6A51F46E331001A4201 /* DDLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F58F621DF0BBB100BCAB13 /* DDLabelTests.swift */; };
 		1C0BD6A61F46E331001A4201 /* DDImageViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F58F641DF0BC2B00BCAB13 /* DDImageViewTests.swift */; };
 		1C0BD6A71F46E331001A4201 /* DDTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4030BDE1E41305C007502FC /* DDTextFieldTests.swift */; };
-		A47DDD08F9201128623B2ED9 /* libPods-DragDropUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBCFA19C2CAD03AE0A2AAED /* libPods-DragDropUITests.a */; };
+		C9162CAC2A06337E32276EFE /* Pods_DragDropUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA26522989FF787CCFA3AF5F /* Pods_DragDropUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +60,7 @@
 		A4F58F621DF0BBB100BCAB13 /* DDLabelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDLabelTests.swift; sourceTree = "<group>"; };
 		A4F58F641DF0BC2B00BCAB13 /* DDImageViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDImageViewTests.swift; sourceTree = "<group>"; };
 		A4F58F661DF0BCCA00BCAB13 /* DD+ViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DD+ViewTests.swift"; sourceTree = "<group>"; };
-		ADBCFA19C2CAD03AE0A2AAED /* libPods-DragDropUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DragDropUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA26522989FF787CCFA3AF5F /* Pods_DragDropUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DragDropUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA73146253FAA0DF4B5F5E41 /* Pods-DragDropUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragDropUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DragDropUITests/Pods-DragDropUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E437CD21FEFB9364CE4BAA59 /* Pods-DragDropUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragDropUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DragDropUITests/Pods-DragDropUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,7 +78,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C0BD6451F46DD0F001A4201 /* DragDropUI.framework in Frameworks */,
-				A47DDD08F9201128623B2ED9 /* libPods-DragDropUITests.a in Frameworks */,
+				C9162CAC2A06337E32276EFE /* Pods_DragDropUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				635F35D602743F903596C2F5 /* Pods_DragDropUI.framework */,
-				ADBCFA19C2CAD03AE0A2AAED /* libPods-DragDropUITests.a */,
+				BA26522989FF787CCFA3AF5F /* Pods_DragDropUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -195,6 +195,7 @@
 				1C0BD6401F46DD0F001A4201 /* Sources */,
 				1C0BD6411F46DD0F001A4201 /* Frameworks */,
 				1C0BD6421F46DD0F001A4201 /* Resources */,
+				A059965CDC1C5A1BDB645E42 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -281,6 +282,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A059965CDC1C5A1BDB645E42 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DragDropUITests/Pods-DragDropUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DragDropUITests/Pods-DragDropUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

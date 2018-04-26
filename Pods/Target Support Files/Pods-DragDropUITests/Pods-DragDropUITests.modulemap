@@ -1,4 +1,4 @@
-module Pods_DragDropUITests [system] {
+framework module Pods_DragDropUITests {
   umbrella header "Pods-DragDropUITests-umbrella.h"
 
   export *

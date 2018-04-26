@@ -1,1 +1,0 @@
-../../../Quick/Sources/QuickSpecBase/include/QuickSpecBase.h

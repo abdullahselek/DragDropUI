@@ -1,6 +1,0 @@
-module Nimble [system] {
-  umbrella header "Nimble-umbrella.h"
-
-  export *
-  module * { export * }
-}
