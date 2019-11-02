@@ -11,23 +11,23 @@ import DragDropUI
 
 class ViewController: UIViewController {
 
+    // MARK: - Properties
     @IBOutlet weak var draggableView: DDView!
 
+    // MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         draggableView.ddDelegate = self
     }
-
 }
 
+// MARK: - DDViewDelegate
 extension ViewController: DDViewDelegate {
-
     func viewWasDragged(view: UIView, draggedPoint: CGPoint) {
-        print(NSStringFromCGPoint(draggedPoint))
+        print(NSCoder.string(for: draggedPoint))
     }
 
     func viewWasDropped(view: UIView, droppedPoint: CGPoint) {
-        print(NSStringFromCGPoint(droppedPoint))
+        print(NSCoder.string(for: droppedPoint))
     }
-
 }

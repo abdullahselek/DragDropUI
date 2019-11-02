@@ -28,8 +28,8 @@ import UIKit
 
 public extension DDProtocol where Self: UIView {
 
-    public var view: UIView { get { return self } }
-    public var parentView: UIView? { get { return self.view.superview } }
+    var view: UIView { get { return self } }
+    var parentView: UIView? { get { return self.view.superview } }
 
     func registerGesture() {
         let panGesture = UIPanGestureRecognizer()
@@ -63,7 +63,7 @@ public extension DDProtocol where Self: UIView {
         switch pressGesture.state {
         case .began:
             self.draggedPoint = self.view.center
-            self.parentView?.bringSubview(toFront: self.view)
+            self.parentView?.bringSubviewToFront(self.view)
             break
         case .cancelled, .ended, .failed:
             if self.ddDelegate != nil {

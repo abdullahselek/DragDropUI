@@ -101,19 +101,17 @@ class DD_ViewTests: QuickSpec {
 }
 
 class LongPressGestureRecognizerStateBeganFake: UILongPressGestureRecognizer {
-
-    override open var state: UIGestureRecognizerState {
-        return .began
+    override open var state: UIGestureRecognizer.State {
+        get { return .began }
+        set {}
     }
-
 }
 
 class LongPressGestureRecognizerStateCancelFake: UILongPressGestureRecognizer {
-
-    override open var state: UIGestureRecognizerState {
-        return .cancelled
+    override open var state: UIGestureRecognizer.State {
+        get { return .cancelled }
+        set {}
     }
-    
 }
 
 class UIViewControllerFake: UIViewController, DDViewDelegate {
