@@ -9,6 +9,7 @@ A set of iOS UI components which have drag &amp; drop capability. There is also 
 
 | DragDropUI Version | Minimum iOS Target  | Swift Version |
 |:--------------------:|:---------------------------:|:---------------------------:|
+| 1.0.5 | 9.0 | 5.x |
 | 1.0.4 | 9.0 | 4.1 |
 | 1.0.3 | 9.0 | 4.0 |
 | 1.0.2 | 8.0 | 3.x |
@@ -29,7 +30,7 @@ platform :ios, '9.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-	pod 'DragDropUI', '~> 1.0.4'
+	pod 'DragDropUI', '~> 1.0.5'
 end
 ```
 
@@ -51,10 +52,20 @@ brew install carthage
 To integrate DragDropUI into your Xcode project using Carthage, specify it in your Cartfile:
 
 ```
-github "abdullahselek/DragDropUI" ~> 1.0.4
+github "abdullahselek/DragDropUI" ~> 1.0.5
 ```
 
 Run carthage update to build the framework and drag the built DragDropUI.framework into your Xcode project.
+
+## Swift Package Manager
+
+Modify your `Package.swift` file to include the following dependency:
+
+```
+.package(url: "https://github.com/abdullahselek/DragDropUI.git", from: "1.0.5")
+```
+
+Run `swift package resolve`
 
 ## DragDropUI contains
 
