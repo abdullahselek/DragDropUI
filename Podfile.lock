@@ -1,7 +1,7 @@
 PODS:
-  - DragDropUI (1.0.4)
-  - Nimble (8.0.4)
-  - Quick (2.2.0)
+  - DragDropUI (1.0.5)
+  - Nimble (8.1.1)
+  - Quick (3.0.0)
 
 DEPENDENCIES:
   - DragDropUI (from `.`)
@@ -18,10 +18,10 @@ EXTERNAL SOURCES:
     :path: "."
 
 SPEC CHECKSUMS:
-  DragDropUI: b415f5e9ee88f6f87249f8b16f6fec68f0449037
-  Nimble: 18d5360282923225d62b09d781f63abc1a0111fc
-  Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
+  DragDropUI: dd7360502b91f4beed0056647eb0709996d6c68b
+  Nimble: 5f8a2fb6fa343a7242dfdd9d42f7267419d464b2
+  Quick: 6d9559f40647bc4d510103842ef2fdd882d753e2
 
 PODFILE CHECKSUM: 62e263c2371de9ef205cd56901a30b0bb04b6ecb
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.3
