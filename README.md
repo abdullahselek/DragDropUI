@@ -68,6 +68,12 @@ Modify your `Package.swift` file to include the following dependency:
 
 Run `swift package resolve`
 
+## XCFramework
+
+XCFrameworks require Xcode 11 or later and integration is very similar to integration of .framework format. Please use script [scripts/build-framework.sh](scripts/build-framework.sh) to generate binary DragDropUI.xcframework archive that you can use as a dependency in Xcode.
+
+DragDropUI.xcframework is a Release (Optimized) binary that offer best available Swift code performance.
+
 ## DragDropUI contains
 
 - [x] DDView
